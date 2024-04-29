@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <FontFamily x:Key="Dosis">/Fonts/#Dosis</FontFamily>
+    
+    <ControlTemplate x:Key="ButtonClose" TargetType="{x:Type Button}">
+        <Grid Background="Transparent" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
+            <Image Source="\Images\close.png" Stretch="Fill"/>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="ButtonMax" TargetType="{x:Type Button}">
+        <Grid Background="Transparent" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
+            <Image Source="\Images\max.png" Stretch="Fill"/>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="ButtonMin" TargetType="{x:Type Button}">
+        <Grid Background="Transparent" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
+            <Image Source="\Images\min.png" Stretch="Fill"/>
+        </Grid>
+    </ControlTemplate>
+</ResourceDictionary>

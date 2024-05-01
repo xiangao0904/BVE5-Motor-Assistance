@@ -8,24 +8,28 @@
         Title="MainWindow" Height="512" Width="720" 
         WindowStyle="None"
         AllowsTransparency="True"
-        Background="Transparent" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" 
+        Background="Transparent" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Images/logo.png" 
         >
+    <Grid x:Name="all">
     <Border Background="#303942" CornerRadius="10">
-       
-        <Grid ShowGridLines="True">
+
+
+        <Grid x:Name="body" ShowGridLines="True">
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
                 <RowDefinition/>
                 <RowDefinition Height="46"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="BVE5 Motor Assistance" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="{StaticResource Dosis}"/>
-            <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Template="{DynamicResource ButtonMin}" Height="60" Width="55" Cursor="Hand" Click="ButtonMin_Click"/>
-                <Button Template="{DynamicResource ButtonMax}" Height="60" Width="55" Cursor="Hand" Click="ButtonMax_Click" />
-                <Button Template="{DynamicResource ButtonClose}" Height="60" Width="55" Cursor="Hand" Click="ButtonClose_Click"/>
-
-            </StackPanel>
+                <Grid x:Name="title" MouseMove="title_MouseMove">
+                    <TextBlock Text="BVE5 Motor Assistance" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="{StaticResource Dosis}"/>
+                    <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button Template="{DynamicResource ButtonMin}" Height="60" Width="55" Cursor="Hand" Click="ButtonMin_Click"/>
+                        <Button Template="{DynamicResource ButtonMax}" Height="60" Width="55" Cursor="Hand" Click="ButtonMax_Click" />
+                        <Button Template="{DynamicResource ButtonClose}" Height="60" Width="55" Cursor="Hand" Click="ButtonClose_Click"/>
+                    </StackPanel>
+                </Grid>
         </Grid>
     </Border>
+    </Grid>
 </Window>

@@ -40,5 +40,13 @@ namespace BVE5_Motor_Assistance
         {
             this.WindowState = WindowState.Minimized;
         }
+
+        private void title_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                this.DragMove();
+            }
+        }
     }
 }

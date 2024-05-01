@@ -8,7 +8,7 @@
         Title="MainWindow" Height="512" Width="720" 
         WindowStyle="None"
         AllowsTransparency="True"
-        Background="Transparent" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Images/logo.png" 
+        Background="Transparent" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/Images/logo.png" Loaded="Window_Loaded" 
         >
     <Grid x:Name="all">
     <Border Background="#303942" CornerRadius="10">

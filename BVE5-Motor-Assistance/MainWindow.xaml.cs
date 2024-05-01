@@ -19,6 +19,7 @@ namespace BVE5_Motor_Assistance
         public MainWindow()
         {
             InitializeComponent();
+            this.Loaded += this.Window_Loaded;
         }
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
@@ -48,5 +49,29 @@ namespace BVE5_Motor_Assistance
                 this.DragMove();
             }
         }
-    }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            OnStateChanged(null);
+        }
+        protected override void OnStateChanged(EventArgs e)
+        {
+            switch (this.WindowState)
+            {
+                case WindowState.Maximized:
+                    this.MaxWidth = SystemParameters.WorkArea.Width + 16;
+                    this.MaxHeight = SystemParameters.WorkArea.Height + 16;
+                    this.BorderThickness = new Thickness(5); //最大化后需要调整
+
+                    break;
+
+                case WindowState.Normal:
+                    this.BorderThickness = new Thickness(0);
+                    this.MaxWidth = SystemParameters.WorkArea.Width + 16;
+                    this.MaxHeight = SystemParameters.WorkArea.Height + 16;
+                    break;
+            }
+        }
+    
+}
 }

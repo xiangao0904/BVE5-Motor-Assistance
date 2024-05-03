@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ControlTemplate x:Key="ButtonStartMenu" TargetType="{x:Type Button}">
+        <Grid Cursor="Hand" Background="#373F47">
+            <Rectangle Fill="#46515C" Visibility="{TemplateBinding Visibility}"/>
+            <Rectangle Fill="#E7C48A" Width="4" HorizontalAlignment="Left" Visibility="{TemplateBinding Visibility}"/>
+            <Image Height="20" Source=""/>
+            <TextBlock Text="{TemplateBinding Content}" Foreground="White" FontSize="20" FontFamily="{StaticResource Deyihei}"/>
+        </Grid>
+    </ControlTemplate>
+</ResourceDictionary>

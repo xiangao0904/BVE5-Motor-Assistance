@@ -4,11 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BVE5_Motor_Assistance"
+        xmlns:ct="clr-namespace:BVE5_Motor_Assistance.Control"
         mc:Ignorable="d"
         Title="MainWindow" Height="683" Width="960" 
         WindowStyle="None"
         AllowsTransparency="True"
-        Background="Transparent" WindowStartupLocation="CenterScreen" Icon="/Images/logo.png" Loaded="Window_Loaded" 
+        Background="Transparent" WindowStartupLocation="CenterScreen" Icon="/Images/logo.png" Loaded="Window_Loaded" ResizeMode="NoResize" 
         >
     <Grid x:Name="all">
         <Border Background="#515A63" CornerRadius="10">
@@ -37,9 +38,14 @@
                         <ColumnDefinition/>
                         <ColumnDefinition Width="165"/>
                     </Grid.ColumnDefinitions>
-                    <DockPanel LastChildFill="False"/>
-                    <Rectangle Fill="#303942"/>
-                    <Rectangle Fill="#303942" Grid.Column="2"/>
+                    <!--左侧-->
+                    <Rectangle Fill="#373F47"/>
+                    <StackPanel>
+                        <ct:StartButton/>
+
+                    </StackPanel>
+
+                    <Rectangle Fill="#373F47" Grid.Column="2"/>
                 </Grid>
                 <!--Foot-->
                 <Border Background="#303942" CornerRadius="10" Grid.Row="3"/>

@@ -11,6 +11,8 @@
 
   <ItemGroup>
     <None Remove="Fonts\Dosis-VariableFont_wght.ttf" />
+    <None Remove="Fonts\SmileySans-Oblique.ttf" />
+    <None Remove="Fonts\SourceHanSansSC-Regular-2.otf" />
     <None Remove="Images\close.png" />
     <None Remove="Images\logo.png" />
     <None Remove="Images\max.png" />
@@ -19,6 +21,8 @@
 
   <ItemGroup>
     <Resource Include="Fonts\Dosis-VariableFont_wght.ttf" />
+    <Resource Include="Fonts\SmileySans-Oblique.ttf" />
+    <Resource Include="Fonts\SourceHanSansSC-Regular-2.otf" />
     <Resource Include="Images\close.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

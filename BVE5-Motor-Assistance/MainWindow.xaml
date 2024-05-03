@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BVE5_Motor_Assistance"
         mc:Ignorable="d"
-        Title="MainWindow" Height="512" Width="720" 
+        Title="MainWindow" Height="683" Width="960" 
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent" WindowStartupLocation="CenterScreen" Icon="/Images/logo.png" Loaded="Window_Loaded" 
         >
     <Grid x:Name="all">
-        <Border Background="#363F48" CornerRadius="10">
+        <Border Background="#515A63" CornerRadius="10">
 
 
         <Grid x:Name="body" ShowGridLines="True">
@@ -20,7 +20,7 @@
                 <RowDefinition/>
                 <RowDefinition Height="46"/>
             </Grid.RowDefinitions>
-
+                <!--Title-->
                 <Grid x:Name="title" MouseMove="title_MouseMove">
                     <Border Background="#303942" CornerRadius="10"/>
                     <TextBlock Text="BVE5 Motor Assistance" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontFamily="{StaticResource Dosis}"/>
@@ -29,12 +29,23 @@
                         <Button Template="{DynamicResource ButtonMax}" Height="60" Width="55" Cursor="Hand" Click="ButtonMax_Click" />
                         <Button Template="{DynamicResource ButtonClose}" Height="60" Width="55" Cursor="Hand" Click="ButtonClose_Click"/>
                     </StackPanel>
-                    
                 </Grid>
-                <Thumb Cursor="SizeNWSE" DragDelta="Thumb_DragDelta" Template="{DynamicResource ThumbTemplate1}" Grid.Row="2" HorizontalAlignment="Right" Width="20">
-                    
-                </Thumb>
-        </Grid>
+                <!--Body-->
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="191"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="165"/>
+                    </Grid.ColumnDefinitions>
+                    <DockPanel LastChildFill="False"/>
+                    <Rectangle Fill="#303942"/>
+                    <Rectangle Fill="#303942" Grid.Column="2"/>
+                </Grid>
+                <!--Foot-->
+                <Border Background="#303942" CornerRadius="10" Grid.Row="3"/>
+                <TextBlock FontSize="18" Text="Huli v0.0.1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="White" Margin="0,0,28,0" FontFamily="{StaticResource Siyuan}" />
+                <Thumb Cursor="SizeNWSE" DragDelta="Thumb_DragDelta" Template="{DynamicResource ThumbTemplate1}" Grid.Row="2" HorizontalAlignment="Right" Width="20"/>
+            </Grid>
     </Border>
     </Grid>
 </Window>

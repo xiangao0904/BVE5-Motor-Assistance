@@ -63,13 +63,16 @@ namespace BVE5_Motor_Assistance
                     this.MaxWidth = SystemParameters.WorkArea.Width + 16;
                     this.MaxHeight = SystemParameters.WorkArea.Height + 16;
                     this.BorderThickness = new Thickness(5); //最大化后需要调整
-
+                    this.MinHeight = 512;
+                    this.MinWidth = 720;
                     break;
 
                 case WindowState.Normal:
                     this.BorderThickness = new Thickness(0);
                     this.MaxWidth = SystemParameters.WorkArea.Width + 16;
                     this.MaxHeight = SystemParameters.WorkArea.Height + 16;
+                    this.MinHeight = 512;
+                    this.MinWidth = 720;
                     break;
             }
 
@@ -79,8 +82,23 @@ namespace BVE5_Motor_Assistance
 
         private void Thumb_DragDelta(object sender, System.Windows.Controls.Primitives.DragDeltaEventArgs e)
         {
-            Width += e.HorizontalChange;
-            Height += e.VerticalChange;
+            if (Width < 720)
+            {
+                Width = 720;
+            }
+            else
+            {
+                Width += e.HorizontalChange;
+            }
+            if (Height < 512)
+            {
+                Height = 512;
+            }
+            else
+            {
+                Height += e.VerticalChange;
+            }
+
         }
     }
 }

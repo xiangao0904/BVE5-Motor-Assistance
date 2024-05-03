@@ -4,6 +4,7 @@
 # * text=auto
 *.xaml  linguist-detectable=true
 *.cs     linguist-detectable=true
+*.png     linguist-detectable=true
 ###############################################################################
 # Set default behavior for command prompt diff.
 #

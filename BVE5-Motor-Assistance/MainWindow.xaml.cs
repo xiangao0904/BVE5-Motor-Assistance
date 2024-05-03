@@ -76,5 +76,11 @@ namespace BVE5_Motor_Assistance
 
 
         }
+
+        private void Thumb_DragDelta(object sender, System.Windows.Controls.Primitives.DragDeltaEventArgs e)
+        {
+            Width += e.HorizontalChange;
+            Height += e.VerticalChange;
+        }
     }
 }

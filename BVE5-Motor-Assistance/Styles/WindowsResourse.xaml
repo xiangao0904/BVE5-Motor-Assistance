@@ -19,4 +19,9 @@
             <Image Source="\Images\min.png" Stretch="Fill"/>
         </Grid>
     </ControlTemplate>
+    <ControlTemplate x:Key="ThumbTemplate1" TargetType="{x:Type Thumb}">
+        <Grid>
+            <Border Background="Red"/>
+        </Grid>
+    </ControlTemplate>
 </ResourceDictionary>

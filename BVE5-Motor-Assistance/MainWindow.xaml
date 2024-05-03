@@ -8,7 +8,7 @@
         Title="MainWindow" Height="512" Width="720" 
         WindowStyle="None"
         AllowsTransparency="True"
-        Background="Transparent" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen" Icon="/Images/logo.png" Loaded="Window_Loaded" 
+        Background="Transparent" WindowStartupLocation="CenterScreen" Icon="/Images/logo.png" Loaded="Window_Loaded" 
         >
     <Grid x:Name="all">
         <Border Background="#363F48" CornerRadius="10">
@@ -31,6 +31,9 @@
                     </StackPanel>
                     
                 </Grid>
+                <Thumb Cursor="SizeNWSE" DragDelta="Thumb_DragDelta" Template="{DynamicResource ThumbTemplate1}" Grid.Row="2" HorizontalAlignment="Right" Width="20">
+                    
+                </Thumb>
         </Grid>
     </Border>
     </Grid>

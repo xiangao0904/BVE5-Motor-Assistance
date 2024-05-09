@@ -41,7 +41,7 @@
                     <!--左侧-->
                     <Rectangle Fill="#373F47"/>
                     <StackPanel>
-                        <ct:StartButton/>
+                        <ct:StartButton Content="开始"/>
 
                     </StackPanel>
 

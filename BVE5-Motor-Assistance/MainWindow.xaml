@@ -9,18 +9,18 @@
         Title="MainWindow" Height="683" Width="960" 
         WindowStyle="None"
         AllowsTransparency="True"
-        Background="Transparent" WindowStartupLocation="CenterScreen" Icon="/Images/logo.png" Loaded="Window_Loaded" ResizeMode="NoResize" 
+        Background="Transparent" WindowStartupLocation="CenterScreen" Icon="/Images/logo.png" Loaded="Window_Loaded" ResizeMode="CanResizeWithGrip" 
         >
     <Grid x:Name="all">
         <Border Background="#515A63" CornerRadius="10">
 
 
-        <Grid x:Name="body" ShowGridLines="True">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="60"/>
-                <RowDefinition/>
-                <RowDefinition Height="46"/>
-            </Grid.RowDefinitions>
+            <Grid x:Name="body" ShowGridLines="True">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="46"/>
+                </Grid.RowDefinitions>
                 <!--Title-->
                 <Grid x:Name="title" MouseMove="title_MouseMove">
                     <Border Background="#303942" CornerRadius="10"/>
@@ -41,7 +41,10 @@
                     <!--左侧-->
                     <Rectangle Fill="#373F47"/>
                     <StackPanel>
-                        <ct:StartButton Content="开始"/>
+                        <ct:StartButton Height="52" Content="历史记录" Background="#46515C" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/history.png" VisibilityYellow="Visible" Click="StartButton_Click" />
+                        <ct:StartButton Height="52" Content="新建文件" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/newfile.png" Click="StartButton_Click" />
+                        <ct:StartButton Height="52" Content="打开文件" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/openfile.png" Click="StartButton_Click" />
+                        <ct:StartButton Height="52" Content="偏好设置" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/setting.png" Click="StartButton_Click" />
 
                     </StackPanel>
 
@@ -50,8 +53,8 @@
                 <!--Foot-->
                 <Border Background="#303942" CornerRadius="10" Grid.Row="3"/>
                 <TextBlock FontSize="18" Text="Huli v0.0.1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="White" Margin="0,0,28,0" FontFamily="{StaticResource Siyuan}" />
-                <Thumb Cursor="SizeNWSE" DragDelta="Thumb_DragDelta" Template="{DynamicResource ThumbTemplate1}" Grid.Row="2" HorizontalAlignment="Right" Width="20"/>
+                <!--<Thumb Cursor="SizeNWSE" DragDelta="Thumb_DragDelta" Template="{DynamicResource ThumbTemplate1}" Grid.Row="2" HorizontalAlignment="Left" Width="20" Margin="940,0,0,0"/>-->
             </Grid>
-    </Border>
+        </Border>
     </Grid>
 </Window>

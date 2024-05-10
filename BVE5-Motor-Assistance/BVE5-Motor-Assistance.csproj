@@ -14,9 +14,13 @@
     <None Remove="Fonts\SmileySans-Oblique.ttf" />
     <None Remove="Fonts\SourceHanSansSC-Regular-2.otf" />
     <None Remove="Images\close.png" />
+    <None Remove="Images\history.png" />
     <None Remove="Images\logo.png" />
     <None Remove="Images\max.png" />
     <None Remove="Images\min.png" />
+    <None Remove="Images\newfile.png" />
+    <None Remove="Images\openfile.png" />
+    <None Remove="Images\setting.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +30,7 @@
     <Resource Include="Images\close.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\history.png" />
     <Resource Include="Images\logo.png" />
     <Resource Include="Images\max.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -33,6 +38,9 @@
     <Resource Include="Images\min.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\newfile.png" />
+    <Resource Include="Images\openfile.png" />
+    <Resource Include="Images\setting.png" />
   </ItemGroup>
 
 </Project>

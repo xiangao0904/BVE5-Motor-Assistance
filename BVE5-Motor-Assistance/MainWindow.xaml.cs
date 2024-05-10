@@ -83,9 +83,21 @@ namespace BVE5_Motor_Assistance
         private void Thumb_DragDelta(object sender, System.Windows.Controls.Primitives.DragDeltaEventArgs e)
         {
 
-                //Width += e.HorizontalChange;
-                //Height += e.HorizontalChange;
-            
+
+
+            double yAdjust = Height + e.VerticalChange;
+            double xAdjust = Width + e.HorizontalChange;
+
+            //make sure not to resize to negative width or heigth            
+            xAdjust = (ActualWidth + xAdjust) > MinWidth ? xAdjust : MinWidth;
+            yAdjust = (ActualHeight + yAdjust) > MinHeight ? yAdjust : MinHeight;
+
+            Width = xAdjust;
+            Height = yAdjust;
+        }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }

@@ -8,7 +8,8 @@
             
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="styles\windowsresourse.xaml" />
-                <ResourceDictionary Source="styles\mainwindow.xaml" />
+                <ResourceDictionary Source="styles\mainwindowstyle.xaml" />
+                <ResourceDictionary Source="Control/StartButtonStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

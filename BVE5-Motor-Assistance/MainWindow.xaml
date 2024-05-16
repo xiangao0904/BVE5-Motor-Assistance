@@ -35,7 +35,7 @@
                         <Button Template="{DynamicResource ButtonClose}" Height="60" Width="55" Cursor="Hand" Click="ButtonClose_Click"/>
                     </StackPanel>
                 </Grid>
-                <Frame x:Name="frame" Grid.Row="1" Grid.Column="1"/>
+                <Frame x:Name="frame" Grid.Row="1" Grid.Column="1" NavigationUIVisibility="Hidden"/>
 
 
             </Grid>

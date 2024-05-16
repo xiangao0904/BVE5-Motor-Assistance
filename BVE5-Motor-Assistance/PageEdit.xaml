@@ -3,12 +3,35 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:BVE5_Motor_Assistance"
+      xmlns:local="clr-namespace:BVE5_Motor_Assistance" xmlns:ct="clr-namespace:BVE5_Motor_Assistance.Control"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PageEdit">
 
     <Grid>
-        
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="191"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="252"/>
+            </Grid.ColumnDefinitions>
+            <!--左侧-->
+            <Rectangle Fill="#373F47"/>
+            <StackPanel>
+                <ct:StartButton Height="52" Content="选择模式" Background="#46515C" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/history.png" VisibilityYellow="Visible"  />
+                <ct:StartButton Height="52" Content="移动模式" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/newfile.png"  />
+                <ct:StartButton Height="52" Content="关键帧" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/openfile.png"  />
+
+
+            </StackPanel>
+
+            <Rectangle Fill="#373F47" Grid.Column="2"/>
+        </Grid>
+
+        <Grid Height="46" VerticalAlignment="Bottom">
+            <Border Background="#303942" CornerRadius="0 0 10 10"/>
+            <TextBlock FontSize="18" Text="Huli v0.0.1"  VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="White" Margin="0,0,28,0" FontFamily="{StaticResource Siyuan}" />
+            <!--<Thumb Cursor="SizeNWSE" DragDelta="Thumb_DragDelta" Template="{DynamicResource ThumbTemplate1}"HorizontalAlignment="Left" Width="20" Margin="940,0,0,0"/>-->
+        </Grid>
     </Grid>
 </Page>

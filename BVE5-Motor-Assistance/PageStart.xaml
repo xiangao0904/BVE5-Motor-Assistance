@@ -17,10 +17,10 @@
             <!--左侧-->
             <Rectangle Fill="#373F47"/>
             <StackPanel>
-                <ct:StartButton Height="52" Content="历史记录" Background="#46515C" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/history.png" VisibilityYellow="Visible" Click="StartButton_Click" />
-                <ct:StartButton Height="52" Content="新建文件" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/newfile.png" Click="StartButton_Click" />
-                <ct:StartButton Height="52" Content="打开文件" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/openfile.png" Click="StartButton_Click" />
-                <ct:StartButton Height="52" Content="偏好设置" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/setting.png" Click="StartButton_Click" />
+                <ct:StartButton Height="52" Content="历史记录" Background="#46515C" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/history.png" VisibilityYellow="Visible" />
+                <ct:StartButton Height="52" Content="新建文件" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/newfile.png"  Click="OpenFIleButton" />
+                <ct:StartButton Height="52" Content="打开文件" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/openfile.png"  />
+                <ct:StartButton Height="52" Content="偏好设置" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/setting.png"  />
 
             </StackPanel>
 

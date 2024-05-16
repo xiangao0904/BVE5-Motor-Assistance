@@ -18,7 +18,7 @@
             <!--左侧-->
             <Rectangle Fill="#373F47"/>
             <StackPanel>
-                <ct:StartButton Height="52" Content="选择模式" Background="#46515C" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/history.png" VisibilityYellow="Visible"  />
+                <ct:StartButton Height="52" Content="选择模式" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/history.png" />
                 <ct:StartButton Height="52" Content="移动模式" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/newfile.png"  />
                 <ct:StartButton Height="52" Content="关键帧" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/openfile.png"  />
 

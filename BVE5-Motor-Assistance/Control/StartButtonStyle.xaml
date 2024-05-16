@@ -6,7 +6,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ct:StartButton}">
                     <Border>
-                        <Grid Cursor="Hand" Background="{TemplateBinding Background}">
+                        <Grid x:Name="buttonGrid" Cursor="Hand" Background="{TemplateBinding Background}">
                             <!--<Rectangle x:Name="bgc" Fill="#46515C" Visibility="{TemplateBinding Visibility}"/>-->
                             <Rectangle Fill="#E7C48A" Width="4" HorizontalAlignment="Left" Visibility="{TemplateBinding VisibilityYellow}"/>
 
@@ -18,12 +18,15 @@
                     <ControlTemplate.Triggers>
 
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#46515C"/>
+                            <Setter TargetName="buttonGrid" Property="Background" Value="#46515C"/>
                             <Setter Property="VisibilityYellow" Value="Visible"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="False">
                             <Setter Property="VisibilityYellow" Value="Hidden"/>
                         </Trigger>
+                        <!--<Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#46515C"/>
+                        </Trigger>-->
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
                 

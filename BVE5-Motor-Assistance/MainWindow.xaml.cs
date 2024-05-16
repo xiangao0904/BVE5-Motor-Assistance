@@ -20,6 +20,7 @@ namespace BVE5_Motor_Assistance
         public MainWindow()
         {
             InitializeComponent();
+            frame.Navigate(new PageStart());
             this.Loaded += this.Window_Loaded;
         }
 
@@ -96,9 +97,6 @@ namespace BVE5_Motor_Assistance
             Height = yAdjust;
         }
 
-        private void StartButton_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
     }
 }

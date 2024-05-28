@@ -20,7 +20,7 @@ namespace BVE5_Motor_Assistance
         public MainWindow()
         {
             InitializeComponent();
-            frame.Navigate(new PageStart());
+            frame.Navigate(new PageEdit());
             this.Loaded += this.Window_Loaded;
         }
 

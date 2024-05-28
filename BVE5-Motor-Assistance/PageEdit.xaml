@@ -18,14 +18,23 @@
             <!--左侧-->
             <Rectangle Fill="#373F47"/>
             <StackPanel>
-                <ct:StartButton Height="52" Content="选择模式" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/history.png" />
-                <ct:StartButton Height="52" Content="移动模式" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/newfile.png"  />
-                <ct:StartButton Height="52" Content="关键帧" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/openfile.png"  />
+                <ct:StartButton Height="52" Content="选择模式" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/select.png" />
+                <ct:StartButton Height="52" Content="移动模式" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/move.png"  />
+                <ct:StartButton Height="52" Content="关键帧" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/key.png"  />
 
 
             </StackPanel>
+            
+            <StackPanel Grid.Column="2" Background="#373F47">
+                <TextBlock Text="音轨层级" Foreground="White"/>
+                <TextBlock Text="音轨层级" Foreground="White"/>
+                <TextBlock Text="音轨层级" Foreground="White"/>
 
-            <Rectangle Fill="#373F47" Grid.Column="2"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="文件" Foreground="White"/>
+                    <Button Content="请选择文件"/>
+                </StackPanel>
+            </StackPanel>
         </Grid>
 
         <Grid Height="46" VerticalAlignment="Bottom">

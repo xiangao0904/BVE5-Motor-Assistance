@@ -15,11 +15,14 @@
     <None Remove="Fonts\SourceHanSansSC-Regular-2.otf" />
     <None Remove="Images\close.png" />
     <None Remove="Images\history.png" />
+    <None Remove="Images\key.png" />
     <None Remove="Images\logo.png" />
     <None Remove="Images\max.png" />
     <None Remove="Images\min.png" />
+    <None Remove="Images\move.png" />
     <None Remove="Images\newfile.png" />
     <None Remove="Images\openfile.png" />
+    <None Remove="Images\select.png" />
     <None Remove="Images\setting.png" />
   </ItemGroup>
 
@@ -31,6 +34,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\history.png" />
+    <Resource Include="Images\key.png" />
     <Resource Include="Images\logo.png" />
     <Resource Include="Images\max.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -38,8 +42,10 @@
     <Resource Include="Images\min.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\move.png" />
     <Resource Include="Images\newfile.png" />
     <Resource Include="Images\openfile.png" />
+    <Resource Include="Images\select.png" />
     <Resource Include="Images\setting.png" />
   </ItemGroup>
 

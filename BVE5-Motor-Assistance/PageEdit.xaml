@@ -32,7 +32,7 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="文件" Foreground="White"/>
-                    <Button Content="请选择文件"/>
+                    <Button x:Name="soundfilebutton" Content="请选择文件" Click="SoundFile_Click"/>
                 </StackPanel>
             </StackPanel>
         </Grid>

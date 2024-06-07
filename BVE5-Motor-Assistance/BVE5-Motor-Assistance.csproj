@@ -49,4 +49,10 @@
     <Resource Include="Images\setting.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="ProgramFile\settings.cfg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

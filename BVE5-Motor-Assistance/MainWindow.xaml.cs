@@ -20,8 +20,8 @@ namespace BVE5_Motor_Assistance
         public MainWindow()
         {
             InitializeComponent();
-            frame.Navigate(new PageEdit());
             this.Loaded += this.Window_Loaded;
+            frame.Navigate(new PageEdit());
         }
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
@@ -84,19 +84,10 @@ namespace BVE5_Motor_Assistance
         private void Thumb_DragDelta(object sender, System.Windows.Controls.Primitives.DragDeltaEventArgs e)
         {
 
+                //Width += e.HorizontalChange;
+                //Height += e.HorizontalChange;
+            
 
-
-            double yAdjust = Height + e.VerticalChange;
-            double xAdjust = Width + e.HorizontalChange;
-
-            //make sure not to resize to negative width or heigth            
-            xAdjust = (ActualWidth + xAdjust) > MinWidth ? xAdjust : MinWidth;
-            yAdjust = (ActualHeight + yAdjust) > MinHeight ? yAdjust : MinHeight;
-
-            Width = xAdjust;
-            Height = yAdjust;
         }
-
-
     }
 }

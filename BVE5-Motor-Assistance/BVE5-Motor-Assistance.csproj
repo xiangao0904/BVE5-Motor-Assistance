@@ -24,6 +24,7 @@
     <None Remove="Images\openfile.png" />
     <None Remove="Images\select.png" />
     <None Remove="Images\setting.png" />
+    <None Remove="PageEdit.xaml~RF5ffe38.TMP" />
   </ItemGroup>
 
   <ItemGroup>

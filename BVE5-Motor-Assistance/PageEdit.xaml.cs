@@ -18,17 +18,41 @@ using System.Windows.Shapes;
 
 
 using BVE5_Motor_Assistance.Logic;
+using System.ComponentModel;
 
 namespace BVE5_Motor_Assistance
 {
     /// <summary>
     /// PageEdit.xaml 的交互逻辑
     /// </summary>
-    public partial class PageEdit : Page
+    public partial class PageEdit : Page, INotifyPropertyChanged
     {
         public PageEdit()
         {
             InitializeComponent();
+        }
+
+        private string _fileName;
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public string FileName
+        {
+            get { return _fileName; }
+            set
+            {
+                if (_fileName != null)
+                {
+                    _fileName = value;
+                    OnPropertyChanged("FileName");
+                }
+                
+            }
         }
 
         private void SoundFile_Click(object sender, RoutedEventArgs e)
@@ -51,10 +75,16 @@ namespace BVE5_Motor_Assistance
             openFileDialog.Filter = "motorsounds|*.wav;*.ogg;";
             if (openFileDialog.ShowDialog() == true)
             {
-                
-                soundfilebutton.Content = openFileDialog.SafeFileName;
+                string fileName = openFileDialog.SafeFileName;
+                FileName = fileName;
+                soundfilebutton.Content = fileName;
                 readCfgInstance.ModifySettingsValue("lastDirectory", System.IO.Path.GetDirectoryName(openFileDialog.FileName));
             }
+        }
+
+        private void TextBlock_Initialized(object sender, EventArgs e)
+        {
+            FileName = "sb";
         }
     }
 }

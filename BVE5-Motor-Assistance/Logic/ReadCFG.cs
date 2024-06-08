@@ -34,7 +34,6 @@ namespace BVE5_Motor_Assistance.Logic
         public void ModifySettingsValue(string key, string value)
         {
             string filePath = "./ProgramFile/settings.cfg"; // 替换为你要修改的文件路径
-            string filePathBackup = "./ProgramFile/settings.old"; // 替换为你要修改的文件路径
 
             // 创建一个临时文件
             string tempFilePath = System.IO.Path.GetTempFileName();

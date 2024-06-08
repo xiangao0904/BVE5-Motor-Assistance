@@ -37,10 +37,6 @@ namespace BVE5_Motor_Assistance.Control
         public static readonly DependencyProperty VisibilityYellowProperty =
             DependencyProperty.Register("VisibilityYellow", typeof(Visibility), typeof(StartButton));
      
-            
-
-
-
 
     }
 }

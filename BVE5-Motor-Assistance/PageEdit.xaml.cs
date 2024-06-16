@@ -75,16 +75,15 @@ namespace BVE5_Motor_Assistance
             openFileDialog.Filter = "motorsounds|*.wav;*.ogg;";
             if (openFileDialog.ShowDialog() == true)
             {
-                string fileName = openFileDialog.SafeFileName;
+                string fileName = openFileDialog.SafeFileName.Trim();
+                string fileName2 = fileName.Substring(0, fileName.Length - 4);
                 FileName = fileName;
+                NameText.Text = fileName2;
                 soundfilebutton.Content = fileName;
                 readCfgInstance.ModifySettingsValue("lastDirectory", System.IO.Path.GetDirectoryName(openFileDialog.FileName));
             }
         }
 
-        private void TextBlock_Initialized(object sender, EventArgs e)
-        {
-            FileName = "sb";
-        }
+
     }
 }

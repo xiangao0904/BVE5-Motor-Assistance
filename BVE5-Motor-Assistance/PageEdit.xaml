@@ -9,6 +9,7 @@
       Title="PageEdit">
 
     <Grid>
+        
         <Grid Grid.Row="1" Grid.Column="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="191"/>
@@ -24,14 +25,16 @@
 
 
             </StackPanel>
-            
+            <Canvas Grid.Column="1">
+                <MediaElement />
+            </Canvas>
             <StackPanel Grid.Column="2" Background="#373F47">
                 <StackPanel Orientation="Horizontal" Margin="14,14,0,0">
                     <TextBlock Text="音轨层级" Foreground="White" FontSize="20" FontFamily="{DynamicResource Deyihei}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="14,14,0,0">
                     <TextBlock Text="名称" Foreground="White" FontSize="20" FontFamily="{DynamicResource Deyihei}"/>
-                    <TextBlock Text="{Binding FileName}" Initialized="TextBlock_Initialized"/>
+                    <TextBlock x:Name="NameText" Text="Null"  Foreground="White" FontSize="20" FontFamily="{DynamicResource Deyihei}" Margin="26,0,0,0"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="14,14,0,0">
                     <TextBlock Text="颜色" Foreground="White" FontSize="20" FontFamily="{DynamicResource Deyihei}"/>
@@ -40,7 +43,7 @@
                 <StackPanel Orientation="Horizontal" Margin="14,14,0,0">
                     <TextBlock Text="文件"  Foreground="White" FontSize="20" FontFamily="{DynamicResource Deyihei}" VerticalAlignment="Center" />
 
-                    <ct:FButton x:Name="soundfilebutton" Content="请选择文件" Click="SoundFile_Click" Height="26" Width="130" FontFamily="{DynamicResource Deyihei}" FontSize="18" Foreground="White" Margin="16,0,0,0"/>
+                    <ct:FButton x:Name="soundfilebutton" Content="请选择文件" Click="SoundFile_Click" Height="26" Width="130" FontFamily="{DynamicResource Deyihei}" FontSize="18" Foreground="White" Margin="26,0,0,0"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="14,14,0,0">
                     <ct:FButton Content="删除选中点" Height="32" Width="94" FontFamily="{DynamicResource Deyihei}" FontSize="20" Foreground="White"/>
@@ -50,7 +53,10 @@
 
         <Grid Height="46" VerticalAlignment="Bottom">
             <Border Background="#303942" CornerRadius="0 0 10 10"/>
-            <TextBlock FontSize="18" Text="Huli v0.0.1"  VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="White" Margin="0,0,28,0" FontFamily="{StaticResource Siyuan}" />
+
+                <Button x:Name="payerbutton" Content="play" HorizontalAlignment="Center" />
+                <TextBlock FontSize="18" Text="Huli v0.0.1"  VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="White" Margin="0,0,28,0" FontFamily="{StaticResource Siyuan}" />
+
             <!--<Thumb Cursor="SizeNWSE" DragDelta="Thumb_DragDelta" Template="{DynamicResource ThumbTemplate1}"HorizontalAlignment="Left" Width="20" Margin="940,0,0,0"/>-->
         </Grid>
     </Grid>

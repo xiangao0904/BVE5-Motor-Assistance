@@ -1,0 +1,51 @@
+﻿<Window x:Class="BVE5_Motor_Assistance.newfilewin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BVE5_Motor_Assistance"
+        xmlns:ct="clr-namespace:BVE5_Motor_Assistance.Control"
+        mc:Ignorable="d"
+        Title="newfilewin" Height="400" Width="518"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent" WindowStartupLocation="CenterScreen" Icon="/Images/logo.png"
+        >
+
+    <Grid x:Name="all">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="667*"/>
+        </Grid.RowDefinitions>
+        <Border Background="#515A63" CornerRadius="10" Grid.RowSpan="2" BorderBrush="White" BorderThickness="1">
+
+
+            <Grid x:Name="body">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition/>
+                    <!--<RowDefinition Height="46"/>-->
+                </Grid.RowDefinitions>
+                <!--Title-->
+                <Grid x:Name="title" MouseMove="title_MouseMove">
+                    <Border Background="#303942" CornerRadius="10 10 0 0"/>
+                    <TextBlock Text="新建文件" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontFamily="{StaticResource Dosis}" Margin="26,0,0,0"/>
+                    <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button Template="{DynamicResource ButtonClose}" Height="60" Width="55" Cursor="Hand" Click="ButtonClose_Click"/>
+                    </StackPanel>
+
+                </Grid>
+                <StackPanel Grid.Row="1" Margin="30,18,0,0">
+                    <TextBlock Text="音效名称" Foreground="White" FontSize="25" FontFamily="{DynamicResource Deyihei}"/>
+                    <ct:FButton Content="" Width="460" Margin="0,8,0,0" HorizontalAlignment="Left" Height="32"/>
+                    <TextBlock Text="位置" Foreground="White" FontSize="25" FontFamily="{DynamicResource Deyihei}" Margin="0,10,0,0"/>
+                    <ct:FButton x:Name="position" Click="position_Click" Width="460" Margin="0,8,0,0" HorizontalAlignment="Left" Height="32"/>
+                    <TextBlock Text="最大速度" Foreground="White" FontSize="25" FontFamily="{DynamicResource Deyihei}" Margin="0,10,0,0"/>
+                    <ct:FButton Width="460" Margin="0,8,0,0" HorizontalAlignment="Left" Height="32"/>
+                    <ct:FButton x:Name="apply" Content="确定" Foreground="White" Width="121" HorizontalAlignment="Right" Height="38" FontFamily="{DynamicResource Deyihei}" FontSize="25" VerticalAlignment="Bottom" Margin="0,36,35,0" Click="Apply"/>
+                </StackPanel>
+
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

@@ -21,7 +21,8 @@ namespace BVE5_Motor_Assistance
         {
             InitializeComponent();
             this.Loaded += this.Window_Loaded;
-            frame.Navigate(new PageEdit());
+            frame.Navigate(new PageStart());
+            
         }
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)

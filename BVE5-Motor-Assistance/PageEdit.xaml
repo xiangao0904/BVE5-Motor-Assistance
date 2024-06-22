@@ -42,11 +42,14 @@
 
                 <StackPanel Orientation="Horizontal" Margin="14,14,0,0">
                     <TextBlock Text="文件"  Foreground="White" FontSize="20" FontFamily="{DynamicResource Deyihei}" VerticalAlignment="Center" />
-
+    
                     <ct:FButton x:Name="soundfilebutton" Content="请选择文件" Click="SoundFile_Click" Height="26" Width="130" FontFamily="{DynamicResource Deyihei}" FontSize="18" Foreground="White" Margin="26,0,0,0"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="14,14,0,0">
                     <ct:FButton Content="删除选中点" Height="32" Width="94" FontFamily="{DynamicResource Deyihei}" FontSize="20" Foreground="White"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="14,15,0,0">
+                    <ct:FButton Content="同步牵引关键帧" Height="32" Width="132" FontFamily="{DynamicResource Deyihei}" FontSize="20" Foreground="White"/>
                 </StackPanel>
             </StackPanel>
         </Grid>

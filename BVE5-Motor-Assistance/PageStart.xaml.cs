@@ -23,6 +23,7 @@ namespace BVE5_Motor_Assistance
         public PageStart()
         {
             InitializeComponent();
+
         }
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
@@ -34,6 +35,13 @@ namespace BVE5_Motor_Assistance
             Window window = Window.GetWindow(this);
             Frame frame = (Frame)window.FindName("frame");
             frame.Content = new PageEdit();
+
+        }
+
+        private void NewFIleButton(object sender, RoutedEventArgs e)
+        {
+            newfilewin newfilewin = new newfilewin();
+            newfilewin.Show();
 
         }
     }

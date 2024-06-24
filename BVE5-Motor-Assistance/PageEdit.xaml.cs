@@ -19,6 +19,7 @@ using System.Windows.Shapes;
 
 using BVE5_Motor_Assistance.Logic;
 using System.ComponentModel;
+using System.Windows.Threading;
 
 namespace BVE5_Motor_Assistance
 {
@@ -84,6 +85,52 @@ namespace BVE5_Motor_Assistance
             }
         }
 
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
 
+
+
+        private void LayerColor_Enter(object sender, KeyEventArgs e)
+        {
+            //if (e.Key == Key.Enter)
+            //{
+            //    LayerColor.Focusable = false;
+            //    DispatcherTimer dispatcherTimer = new DispatcherTimer();
+            //    dispatcherTimer.IsEnabled = false;
+            //    dispatcherTimer.Interval = new TimeSpan((long)0.1);
+            //    dispatcherTimer.Tick += dispatcherTimer_Tick;
+            //    dispatcherTimer.Start();
+                
+            //}
+            //void dispatcherTimer_Tick(object sender, EventArgs e)
+            //{
+            //    LayerColor.Focusable = true;
+            //}
+        }
+
+
+
+        private void LayerColor_lostF(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            string text = LayerColor.Text;
+            try
+            {
+                if (text != "")
+                {
+                    LayerColor.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#" + text));
+                }
+                else
+                {
+                    LayerColor.Foreground = new SolidColorBrush(Colors.White);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("请输入正确的16进制颜色值", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+        }
     }
 }

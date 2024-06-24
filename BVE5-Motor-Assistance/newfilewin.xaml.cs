@@ -1,6 +1,7 @@
 ﻿using BVE5_Motor_Assistance.Logic;
 using Microsoft.Win32;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -30,15 +31,35 @@ namespace BVE5_Motor_Assistance
 
         private void Apply(object sender, RoutedEventArgs e)
         {
-            Frame page2Frame = (Frame)Application.Current.MainWindow.FindName("frame");
-            page2Frame.Navigate(new PageEdit());
-            this.Close();
+            if (maxspeed.Text != "" &&  name.Text !="")
+            {
+                if (Convert.ToInt32(maxspeed.Text) > 400)
+                {
+                    MessageBox.Show("速度最大值为400", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    Frame page2Frame = (Frame)Application.Current.MainWindow.FindName("frame");
+                    page2Frame.Navigate(new PageEdit());
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("请正确输入速度值或名称", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
         private void position_Click(object sender, RoutedEventArgs e)
         {
 
 
 
+        }
+
+        private void maxspeed_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex re = new Regex("[^0-9]+");
+            e.Handled = re.IsMatch(e.Text);
         }
     }
 }

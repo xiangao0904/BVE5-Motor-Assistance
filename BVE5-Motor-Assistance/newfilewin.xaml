@@ -37,12 +37,10 @@
                 </Grid>
                 <StackPanel Grid.Row="1" Margin="30,18,0,0">
                     <TextBlock Text="音效名称" Foreground="White" FontSize="25" FontFamily="{DynamicResource Deyihei}"/>
-                    <ct:FButton Content="" Width="460" Margin="0,8,0,0" HorizontalAlignment="Left" Height="32"/>
-                    <TextBlock Text="位置" Foreground="White" FontSize="25" FontFamily="{DynamicResource Deyihei}" Margin="0,10,0,0"/>
-                    <ct:FButton x:Name="position" Click="position_Click" Width="460" Margin="0,8,0,0" HorizontalAlignment="Left" Height="32"/>
-                    <TextBlock Text="最大速度" Foreground="White" FontSize="25" FontFamily="{DynamicResource Deyihei}" Margin="0,10,0,0"/>
-                    <ct:FButton Width="460" Margin="0,8,0,0" HorizontalAlignment="Left" Height="32"/>
-                    <ct:FButton x:Name="apply" Content="确定" Foreground="White" Width="121" HorizontalAlignment="Right" Height="38" FontFamily="{DynamicResource Deyihei}" FontSize="25" VerticalAlignment="Bottom" Margin="0,36,35,0" Click="Apply"/>
+                    <TextBox x:Name="name" Style="{DynamicResource TextBoxStyle1}" Margin="0,8,0,0" Background="#FF495159"  Width="460" Height="32" HorizontalAlignment="Left" BorderBrush="White" Text="" FontSize="22" VerticalAlignment="Center" VerticalContentAlignment="Center" Foreground="White" InputScope="FileName"/>
+                    <TextBlock Text="最大速度(km/h)" Foreground="White" FontSize="25" FontFamily="{DynamicResource Deyihei}" Margin="0,10,0,0"/>
+                    <TextBox x:Name="maxspeed" Style="{DynamicResource TextBoxStyle1}" Margin="0,8,0,0" Background="#FF495159"  Width="460" Height="32" HorizontalAlignment="Left" BorderBrush="White" Text="120" FontSize="22" VerticalAlignment="Center" VerticalContentAlignment="Center" Foreground="White" InputScope="Number" InputMethod.IsInputMethodEnabled="False"  PreviewTextInput="maxspeed_PreviewTextInput"/>
+                    <ct:FButton x:Name="apply" Content="确定" Foreground="White" Width="121" HorizontalAlignment="Right" Height="38" FontFamily="{DynamicResource Deyihei}" FontSize="25" VerticalAlignment="Bottom" Margin="0,120,35,0" Click="Apply"/>
                 </StackPanel>
 
             </Grid>

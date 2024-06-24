@@ -2,7 +2,7 @@
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
 # * text=auto
-*.xaml  linguist-detectable=true
+#*.xaml  linguist-detectable=true
 *.cs     linguist-detectable=true
 # *.png     linguist-language=Java
 ###############################################################################

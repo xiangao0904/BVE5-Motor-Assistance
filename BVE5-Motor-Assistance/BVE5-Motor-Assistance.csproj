@@ -51,9 +51,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="ProgramFile\lang\en-us.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ProgramFile\lang\zh-cn.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="ProgramFile\settings.cfg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ProgramFile\lang\" />
   </ItemGroup>
 
 </Project>

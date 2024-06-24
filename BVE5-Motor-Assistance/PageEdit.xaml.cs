@@ -123,7 +123,10 @@ namespace BVE5_Motor_Assistance
                 }
                 else
                 {
+<<<<<<< HEAD
 
+=======
+>>>>>>> c12d5f054b26973a57d7b1f3620aa839cd63cf06
                     LayerColor.Foreground = new SolidColorBrush(Colors.White);
                 }
             }

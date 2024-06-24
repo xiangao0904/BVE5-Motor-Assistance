@@ -33,9 +33,13 @@ namespace BVE5_Motor_Assistance
         {
             if (maxspeed.Text != "" &&  name.Text !="")
             {
-                if (Convert.ToInt32(maxspeed.Text) > 400)
+                int maxSpeed = Convert.ToInt32(maxspeed.Text);
+                if (maxSpeed > 400)
                 {
-                    MessageBox.Show("速度最大值为400", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("最大值不超过400", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                }else if (maxSpeed % 5 != 0)
+                {
+                    MessageBox.Show("请输入5的倍数", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 else
                 {

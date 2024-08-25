@@ -9,6 +9,14 @@ namespace BVE5_Motor_Assistance
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-cn");
+            base.OnStartup(e);
+           
+
+        }
     }
+
 
 }

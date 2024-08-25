@@ -41,8 +41,14 @@ namespace BVE5_Motor_Assistance
         private void NewFIleButton(object sender, RoutedEventArgs e)
         {
             newfilewin newfilewin = new newfilewin();
+
             newfilewin.Show();
 
+        }
+
+        private void StartButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-us");
         }
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BVE5_Motor_Assistance"
         xmlns:ct="clr-namespace:BVE5_Motor_Assistance.Control"
         mc:Ignorable="d"
-        Title="MainWindow" Height="683" Width="960" 
+        Title="MainWindow" Height="680" Width="1060" 
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent" WindowStartupLocation="CenterScreen" Icon="/Images/logo.png" Loaded="Window_Loaded" ResizeMode="CanResizeWithGrip" 

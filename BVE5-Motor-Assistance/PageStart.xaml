@@ -3,7 +3,9 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:BVE5_Motor_Assistance" xmlns:ct="clr-namespace:BVE5_Motor_Assistance.Control"
+      xmlns:local="clr-namespace:BVE5_Motor_Assistance" 
+      xmlns:ct="clr-namespace:BVE5_Motor_Assistance.Control"
+      xmlns:loc="clr-namespace:BVE5_Motor_Assistance.Properties"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PageStart">
@@ -16,11 +18,11 @@
             </Grid.ColumnDefinitions>
             <!--左侧-->
             <Rectangle Fill="#373F47"/>
-            <StackPanel>
+            <StackPanel>    
                 <ct:StartButton Height="52" Content="历史记录" Background="#46515C" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/history.png" VisibilityYellow="Visible" />
-                <ct:StartButton Height="52" Content="新建文件" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/newfile.png"  Click="NewFIleButton" />
+                <ct:StartButton Height="52" Content="{x:Static loc:Resources.NewFile}" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/newfile.png"  Click="NewFIleButton" />
                 <ct:StartButton Height="52" Content="打开文件" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/openfile.png" Click="OpenFIleButton"  />
-                <ct:StartButton Height="52" Content="偏好设置" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/setting.png"  />
+                <ct:StartButton Height="52" Content="偏好设置" Background="#373F47" FontSize="20" FontFamily="{DynamicResource Deyihei}" imageSource="/Images/setting.png" Click="StartButton_Click_1"  />
 
             </StackPanel>
 

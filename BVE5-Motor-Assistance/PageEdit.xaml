@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BVE5_Motor_Assistance" xmlns:ct="clr-namespace:BVE5_Motor_Assistance.Control"
       mc:Ignorable="d" 
-      d:DesignHeight="660" d:DesignWidth="800"
+      d:DesignHeight="660" d:DesignWidth="1100"
       Title="PageEdit">
 
 
@@ -63,8 +63,8 @@
                 <ct:FButton Content="同步牵引关键帧" Height="32" Width="132" FontFamily="{DynamicResource Deyihei}" FontSize="20" Foreground="White"/>
             </StackPanel>
         </StackPanel>
-        <Canvas Grid.Column="1" Background="AliceBlue">
-
+        <Canvas Grid.Column="1" Background="#515A63">
+            <TextBlock Text="音高" Canvas.Left="16" Canvas.Top="8" FontFamily="{DynamicResource Deyihei}" Foreground="White" FontSize="15"/>
         </Canvas>
 
 

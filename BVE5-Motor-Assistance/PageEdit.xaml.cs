@@ -28,9 +28,10 @@ namespace BVE5_Motor_Assistance
     /// </summary>
     public partial class PageEdit : Page, INotifyPropertyChanged
     {
-        public PageEdit()
+        public PageEdit(int maxSpeed)
         {
             InitializeComponent();
+            speed.Text = maxSpeed.ToString();
         }
 
         private string _fileName;

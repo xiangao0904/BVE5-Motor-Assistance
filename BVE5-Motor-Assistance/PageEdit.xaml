@@ -38,7 +38,7 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="14,14,0,0">
                 <TextBlock Text="颜色" Foreground="White" FontSize="20" FontFamily="{DynamicResource Deyihei}"/>
-                <TextBox x:Name="LayerColor" FontFamily="{DynamicResource Deyihei}" Style="{DynamicResource TextBoxStyle1}" Background="#FF495159" Height="26" Width="130"  HorizontalAlignment="Left" BorderBrush="White" Text="" FontSize="20"  Foreground="White" InputScope="FileName"  Margin="26,0,0,0" TextChanged="TextBox_TextChanged" KeyDown="LayerColor_Enter" InputMethod.IsInputMethodEnabled="False" LostKeyboardFocus="LayerColor_lostF" />
+                <TextBox x:Name="LayerColor" FontFamily="{DynamicResource Deyihei}" Style="{DynamicResource TextBoxStyle1}" Background="#FF495159" Height="26" Width="130"  HorizontalAlignment="Left" BorderBrush="White" Text="" FontSize="20"  Foreground="White" InputScope="FileName"  Margin="26,0,0,0" TextChanged="TextBox_TextChanged" KeyDown="LayerColor_Enter" Focusable="True" InputMethod.IsInputMethodEnabled="False" LostKeyboardFocus="LayerColor_lostF" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="14,14,0,0">
@@ -63,7 +63,7 @@
                 <ct:FButton Content="同步牵引关键帧" Height="32" Width="132" FontFamily="{DynamicResource Deyihei}" FontSize="20" Foreground="White"/>
             </StackPanel>
         </StackPanel>
-        <Canvas Grid.Column="1" Background="#515A63">
+        <Canvas x:Name="EditSpace" Grid.Column="1" Background="#515A63">
             <TextBlock Text="音高" Canvas.Left="16" Canvas.Top="8" FontFamily="{DynamicResource Deyihei}" Foreground="White" FontSize="15"/>
             <TextBlock x:Name="speed" Text="" Canvas.Left="16" Canvas.Top="40" FontFamily="{DynamicResource Deyihei}" Foreground="White" FontSize="15"/>
         </Canvas>

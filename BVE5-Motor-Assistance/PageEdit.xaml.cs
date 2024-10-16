@@ -28,10 +28,21 @@ namespace BVE5_Motor_Assistance
     /// </summary>
     public partial class PageEdit : Page, INotifyPropertyChanged
     {
+        private int maxSpeed;
         public PageEdit(int maxSpeed)
         {
             InitializeComponent();
+            this.maxSpeed = maxSpeed;
             speed.Text = maxSpeed.ToString();
+
+            // 添加 Loaded 事件处理程序
+            this.SizeChanged += PageEdit_SizeChanged;
+
+        }
+
+        private void PageEdit_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            RenderLines(maxSpeed);
         }
 
         private string _fileName;
@@ -53,7 +64,7 @@ namespace BVE5_Motor_Assistance
                     _fileName = value;
                     OnPropertyChanged("FileName");
                 }
-                
+
             }
         }
 
@@ -65,7 +76,7 @@ namespace BVE5_Motor_Assistance
 
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            
+
             if (Directory.Exists(lastDirectory))
             {
                 openFileDialog.InitialDirectory = lastDirectory;
@@ -88,27 +99,17 @@ namespace BVE5_Motor_Assistance
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
+
         }
 
 
 
         private void LayerColor_Enter(object sender, KeyEventArgs e)
         {
-            //if (e.Key == Key.Enter)
-            //{
-            //    LayerColor.Focusable = false;
-            //    DispatcherTimer dispatcherTimer = new DispatcherTimer();
-            //    dispatcherTimer.IsEnabled = false;
-            //    dispatcherTimer.Interval = new TimeSpan((long)0.1);
-            //    dispatcherTimer.Tick += dispatcherTimer_Tick;
-            //    dispatcherTimer.Start();
-                
-            //}
-            //void dispatcherTimer_Tick(object sender, EventArgs e)
-            //{
-            //    LayerColor.Focusable = true;
-            //}
+            if (e.Key == Key.Enter)
+            {
+                FocusManager.SetFocusedElement(this, null);
+            }
         }
 
 
@@ -130,9 +131,42 @@ namespace BVE5_Motor_Assistance
             }
             catch (Exception)
             {
+                LayerColor.Text = "";
                 MessageBox.Show("请输入正确的16进制颜色值", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
-
                 return;
+            }
+        }
+
+        private void RenderLines(int maxSpeed)
+        {
+            var nonLineChildren = EditSpace.Children.OfType<UIElement>().Where(child => !(child is Line)).ToList();
+
+            // 清除所有子元素
+            EditSpace.Children.Clear();
+
+            // 重新添加非线条组件
+            foreach (var child in nonLineChildren)
+            {
+                EditSpace.Children.Add(child);
+            }
+
+            int renderCount = maxSpeed / 10;
+            double canvasWidth = EditSpace.ActualWidth;
+            double lineSpacing = canvasWidth / renderCount;
+
+            for (int i = 0; i <= renderCount; i++)
+            {
+                Line line = new Line()
+                {
+                    X1 = i * lineSpacing,
+                    Y1 = 41,
+                    X2 = i * lineSpacing,
+                    Y2 = EditSpace.ActualHeight - 41,
+                    Stroke = Brushes.White,
+                    StrokeThickness = 2
+                };
+
+                EditSpace.Children.Add(line);
             }
         }
     }

@@ -65,6 +65,7 @@
         </StackPanel>
         <Canvas x:Name="EditSpace" Grid.Column="1" Background="#515A63">
             <TextBlock Text="音高" Canvas.Left="16" Canvas.Top="8" FontFamily="{DynamicResource Deyihei}" Foreground="White" FontSize="15"/>
+            <TextBlock Text="音高" Canvas.Left="16" Canvas.Top="100" FontFamily="{DynamicResource Deyihei}" Foreground="White" FontSize="15"/>
             <TextBlock x:Name="speed" Text="" Canvas.Left="16" Canvas.Top="40" FontFamily="{DynamicResource Deyihei}" Foreground="White" FontSize="15"/>
         </Canvas>
 

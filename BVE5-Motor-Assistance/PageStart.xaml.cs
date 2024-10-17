@@ -34,7 +34,7 @@ namespace BVE5_Motor_Assistance
         {
             Window window = Window.GetWindow(this);
             Frame frame = (Frame)window.FindName("frame");
-            frame.Content = new PageEdit(120);
+            frame.Content = new PageEdit(120,"null");
 
         }
 

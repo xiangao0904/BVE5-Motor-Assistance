@@ -29,12 +29,12 @@ namespace BVE5_Motor_Assistance
     public partial class PageEdit : Page, INotifyPropertyChanged
     {
         private int maxSpeed;
-        public PageEdit(int maxSpeed)
+        public PageEdit(int maxSpeed,string name)
         {
             InitializeComponent();
             this.maxSpeed = maxSpeed;
             speed.Text = maxSpeed.ToString();
-
+            NameText.Text = name;
             // 添加 Loaded 事件处理程序
             this.SizeChanged += PageEdit_SizeChanged;
 
@@ -42,8 +42,11 @@ namespace BVE5_Motor_Assistance
 
         private void PageEdit_SizeChanged(object sender, SizeChangedEventArgs e)
         {
+            RenderContext();
             RenderLines(maxSpeed);
         }
+
+       
 
         private string _fileName;
 
@@ -136,7 +139,39 @@ namespace BVE5_Motor_Assistance
                 return;
             }
         }
+        private void RenderContext()
+        {
+            var nonLineChildren = EditSpace.Children.OfType<UIElement>().Where(child => !(child is TextBlock)).ToList();
 
+            // 清除所有子元素
+            EditSpace.Children.Clear();
+
+            // 重新添加非线条组件
+            foreach (var child in nonLineChildren)
+            {
+                EditSpace.Children.Add(child);
+            }
+            int renderCount = maxSpeed / 10;
+            double canvasWidth = EditSpace.ActualWidth - (52 * 2);
+            double lineSpacing = canvasWidth / renderCount;
+
+            AddTextBlock("音高", 8);
+            AddTextBlock("音量", EditSpace.ActualHeight - 255);
+
+        }
+        private void AddTextBlock(string text, double top)
+        {
+            TextBlock textBlock = new TextBlock()
+            {
+                Text = text,
+                FontFamily = (FontFamily)FindResource("Deyihei"),
+                Foreground = Brushes.White,
+                FontSize = 15
+            };
+            Canvas.SetLeft(textBlock, 16);
+            Canvas.SetTop(textBlock, top);
+            EditSpace.Children.Add(textBlock);
+        }
         private void RenderLines(int maxSpeed)
         {
             var nonLineChildren = EditSpace.Children.OfType<UIElement>().Where(child => !(child is Line)).ToList();
@@ -151,17 +186,50 @@ namespace BVE5_Motor_Assistance
             }
 
             int renderCount = maxSpeed / 10;
-            double canvasWidth = EditSpace.ActualWidth;
+            double canvasWidth = EditSpace.ActualWidth - (52 * 2);
             double lineSpacing = canvasWidth / renderCount;
 
-            for (int i = 0; i <= renderCount; i++)
+            // 绘制竖线
+            DrawVerticalLines(renderCount, lineSpacing, 32, EditSpace.ActualHeight - 290);
+            DrawVerticalLines(renderCount, lineSpacing, EditSpace.ActualHeight - 230, EditSpace.ActualHeight - 32);
+
+            // 绘制横线
+            lineSpacing = (EditSpace.ActualHeight - 304 - 42) / 9;
+            DrawHorizontalLines(9, lineSpacing, 42, EditSpace.ActualWidth - 42, 41);
+
+            lineSpacing = (190 - 13) / 4;
+            DrawHorizontalLines(4, lineSpacing, 42, EditSpace.ActualWidth - 42, EditSpace.ActualHeight - 220);
+
+        }
+
+        private void DrawVerticalLines(int count, double lineSpacing, double startY, double endY)
+        {
+            for (int i = 0; i <= count; i++)
             {
                 Line line = new Line()
                 {
-                    X1 = i * lineSpacing,
-                    Y1 = 41,
-                    X2 = i * lineSpacing,
-                    Y2 = EditSpace.ActualHeight - 41,
+                    X1 = 52 + i * lineSpacing,
+                    Y1 = startY,
+                    X2 = 52 + i * lineSpacing,
+                    Y2 = endY,
+                    Stroke = Brushes.White,
+                    StrokeThickness = 2.5
+                };
+
+                EditSpace.Children.Add(line);
+            }
+        }
+
+        private void DrawHorizontalLines(int count, double lineSpacing, double startX, double endX, double startY)
+        {
+            for (int i = 0; i <= count; i++)
+            {
+                Line line = new Line()
+                {
+                    X1 = startX,
+                    Y1 = startY + i * lineSpacing,
+                    X2 = endX,
+                    Y2 = startY + i * lineSpacing,
                     Stroke = Brushes.White,
                     StrokeThickness = 2
                 };

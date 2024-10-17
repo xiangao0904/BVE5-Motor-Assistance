@@ -44,7 +44,7 @@ namespace BVE5_Motor_Assistance
                 else
                 {
                     Frame page2Frame = (Frame)Application.Current.MainWindow.FindName("frame");
-                    page2Frame.Navigate(new PageEdit(maxSpeed));
+                    page2Frame.Navigate(new PageEdit(maxSpeed,name.Text));
                     this.Close();
                 }
             }

@@ -1,0 +1,41 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Avalonia_BVE5_Motor_Assistance.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1140" d:DesignHeight="889"
+		Width="1140"
+		Height="889"
+        x:Class="Avalonia_BVE5_Motor_Assistance.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+		ExtendClientAreaChromeHints="NoChrome"
+        ExtendClientAreaToDecorationsHint="True"
+		Background="#515A63"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="BVE5-Motor-Assistance">
+
+	<Window.Styles>
+			
+	
+	</Window.Styles>
+	
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+	
+	
+	
+	<DockPanel>
+		<Grid Height="60" Background="#303942" DockPanel.Dock="Top">
+			<TextBlock Text="BVE5 Motor Assistance" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+			<StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
+
+			</StackPanel>
+		</Grid>
+		<Grid>
+			
+		</Grid>
+	</DockPanel>
+</Window>

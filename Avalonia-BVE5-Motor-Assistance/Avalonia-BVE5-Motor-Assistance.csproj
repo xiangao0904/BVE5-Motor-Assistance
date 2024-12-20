@@ -14,15 +14,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <AvaloniaResource Remove="Assets\Fonts\Dosis-VariableFont_wght.ttf" />
-    <AvaloniaResource Remove="Assets\Fonts\SmileySans-Oblique.ttf" />
-    <AvaloniaResource Remove="Assets\Fonts\SourceHanSansSC-Regular-2.otf" />
+    <AvaloniaResource Remove="Assets\close.png" />
+    <AvaloniaResource Remove="Assets\max.png" />
+    <AvaloniaResource Remove="Assets\min.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Assets\close.png" />
     <None Remove="Assets\Fonts\Dosis-VariableFont_wght.ttf" />
     <None Remove="Assets\Fonts\SmileySans-Oblique.ttf" />
     <None Remove="Assets\Fonts\SourceHanSansSC-Regular-2.otf" />
+    <None Remove="Assets\max.png" />
+    <None Remove="Assets\min.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,14 +42,26 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\Fonts\Dosis-VariableFont_wght.ttf">
+    <Resource Include="Assets\Buttons\close.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\Fonts\SmileySans-Oblique.ttf">
+    <Resource Include="Assets\Buttons\max.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\Fonts\SourceHanSansSC-Regular-2.otf">
+    <Resource Include="Assets\Buttons\min.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Update="Assets\Fonts\Dosis-VariableFont_wght.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Assets\Fonts\SmileySans-Oblique.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Assets\Fonts\SourceHanSansSC-Regular-2.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AvaloniaResource>
   </ItemGroup>
 </Project>

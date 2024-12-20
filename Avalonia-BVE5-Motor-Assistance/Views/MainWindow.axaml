@@ -13,7 +13,6 @@
 		Background="#515A63"
         Icon="/Assets/avalonia-logo.ico"
         Title="BVE5-Motor-Assistance">
-
 	<Window.Styles>
 			
 	
@@ -31,7 +30,15 @@
 		<Grid Height="60" Background="#303942" DockPanel.Dock="Top">
 			<TextBlock Text="BVE5 Motor Assistance" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
 			<StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
-
+				<Button Cursor="Hand" Click="Min_Button_Click">
+					<Image Source="avares://Avalonia-BVE5-Motor-Assistance/Assets/Buttons/min.png"/>
+				</Button>
+				<Button Cursor="Hand" Click="Max_Button_Click">
+					<Image Source="avares://Avalonia-BVE5-Motor-Assistance/Assets/Buttons/max.png"/>
+				</Button>
+				<Button Cursor="Hand" Click="Close_Button_Click">
+					<Image Source="avares://Avalonia-BVE5-Motor-Assistance/Assets/Buttons/close.png" />
+				</Button>
 			</StackPanel>
 		</Grid>
 		<Grid>

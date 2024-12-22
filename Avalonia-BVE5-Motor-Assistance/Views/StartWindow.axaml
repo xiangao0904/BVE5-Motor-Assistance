@@ -1,6 +1,7 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:Avalonia_BVE5_Motor_Assistance.ViewModels"
+        xmlns:ctrl="using:Avalonia_BVE5_Motor_Assistance.Controls"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="1140" d:DesignHeight="889"
@@ -11,12 +12,12 @@
 		ExtendClientAreaChromeHints="NoChrome"
         ExtendClientAreaToDecorationsHint="True"
 		Background="#515A63"
-        Icon="/Assets/avalonia-logo.ico"
+        Icon="/Assets/logo.png"
         Title="BVE5-Motor-Assistance">
 	<Window.Styles>
-			
+
 	
-	</Window.Styles>
+	</Window.Styles>	
 	
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -24,25 +25,16 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 	
-	
-	
 	<DockPanel>
-		<Grid Height="60" Background="#303942" DockPanel.Dock="Top">
-			<TextBlock Text="BVE5 Motor Assistance" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
-			<StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
-				<Button Cursor="Hand" Click="Min_Button_Click">
-					<Image Source="avares://Avalonia-BVE5-Motor-Assistance/Assets/Buttons/min.png"/>
-				</Button>
-				<Button Cursor="Hand" Click="Max_Button_Click">
-					<Image Source="avares://Avalonia-BVE5-Motor-Assistance/Assets/Buttons/max.png"/>
-				</Button>
-				<Button Cursor="Hand" Click="Close_Button_Click">
-					<Image Source="avares://Avalonia-BVE5-Motor-Assistance/Assets/Buttons/close.png" />
-				</Button>
-			</StackPanel>
+		<ctrl:TitleBar DockPanel.Dock="Top"/>
+		<StackPanel DockPanel.Dock="Left">
+			<Button Theme="{StaticResource CustomButtonStyle1}">
+				<TextBlock Text="sss"/>
+			</Button>
+		</StackPanel>
+		<Grid DockPanel.Dock="Bottom" Height="46" Background="#363F48">
+			<TextBlock Text=""/>
 		</Grid>
-		<Grid>
-			
-		</Grid>
+		<TextBlock></TextBlock>
 	</DockPanel>
 </Window>

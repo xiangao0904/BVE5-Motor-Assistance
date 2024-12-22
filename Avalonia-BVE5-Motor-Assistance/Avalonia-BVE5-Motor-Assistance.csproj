@@ -6,6 +6,7 @@
     <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <RootNamespace> Avalonia_BVE5_Motor_Assistance</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,8 +25,12 @@
     <None Remove="Assets\Fonts\Dosis-VariableFont_wght.ttf" />
     <None Remove="Assets\Fonts\SmileySans-Oblique.ttf" />
     <None Remove="Assets\Fonts\SourceHanSansSC-Regular-2.otf" />
+    <None Remove="Assets\logo.png" />
     <None Remove="Assets\max.png" />
     <None Remove="Assets\min.png" />
+    <None Remove="Assets\StartView\newfile.png" />
+    <None Remove="Assets\StartView\openfile.png" />
+    <None Remove="Assets\StartView\setting.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -63,5 +68,20 @@
     <AvaloniaResource Update="Assets\Fonts\SourceHanSansSC-Regular-2.otf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AvaloniaResource>
+    <AvaloniaResource Update="Assets\StartView\newfile.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Assets\StartView\openfile.png">
+      <CopyToOutputDirectory>AvaloniaResource</CopyToOutputDirectory>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Assets\StartView\setting.png">
+      <CopyToOutputDirectory>AvaloniaResource</CopyToOutputDirectory>
+    </AvaloniaResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\StartWindow.axaml.cs">
+      <DependentUpon>StartWindow.axaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

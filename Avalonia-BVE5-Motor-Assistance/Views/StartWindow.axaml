@@ -14,10 +14,6 @@
 		Background="#515A63"
         Icon="/Assets/logo.png"
         Title="BVE5-Motor-Assistance">
-	<Window.Styles>
-
-	
-	</Window.Styles>	
 	
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -27,11 +23,12 @@
 	
 	<DockPanel>
 		<ctrl:TitleBar DockPanel.Dock="Top"/>
-		<StackPanel DockPanel.Dock="Left">
-			<Button Theme="{StaticResource CustomButtonStyle1}">
-				<TextBlock Text="sss"/>
-			</Button>
+		<StackPanel DockPanel.Dock="Left" Width="191" Orientation="Vertical" Background="#373F47">
+			<ctrl:CustomButton1 Width="191"  Height="52" Classes="history" Content="历史记录" VerticalContentAlignment="Center" FontSize="20"></ctrl:CustomButton1>
 		</StackPanel>
+		<!-- <Grid Width="191" Background="#373F47"> -->
+		<!-- 		<ctrl:CustomButton1 Content="111111111111" Height="52"></ctrl:CustomButton1> -->
+		<!-- </Grid> -->
 		<Grid DockPanel.Dock="Bottom" Height="46" Background="#363F48">
 			<TextBlock Text=""/>
 		</Grid>

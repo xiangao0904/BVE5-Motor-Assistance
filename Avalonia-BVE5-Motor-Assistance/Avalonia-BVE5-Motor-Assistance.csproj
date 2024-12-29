@@ -28,9 +28,9 @@
     <None Remove="Assets\logo.png" />
     <None Remove="Assets\max.png" />
     <None Remove="Assets\min.png" />
-    <None Remove="Assets\StartView\newfile.png" />
-    <None Remove="Assets\StartView\openfile.png" />
-    <None Remove="Assets\StartView\setting.png" />
+    <None Remove="Assets\Buttons\Button1\newfile.png" />
+    <None Remove="Assets\Buttons\Button1\openfile.png" />
+    <None Remove="Assets\Buttons\Button1\setting.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -68,13 +68,13 @@
     <AvaloniaResource Update="Assets\Fonts\SourceHanSansSC-Regular-2.otf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AvaloniaResource>
-    <AvaloniaResource Update="Assets\StartView\newfile.png">
+    <AvaloniaResource Update="Assets\Buttons\Button1\newfile.png">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </AvaloniaResource>
-    <AvaloniaResource Update="Assets\StartView\openfile.png">
+    <AvaloniaResource Update="Assets\Buttons\Button1\openfile.png">
       <CopyToOutputDirectory>AvaloniaResource</CopyToOutputDirectory>
     </AvaloniaResource>
-    <AvaloniaResource Update="Assets\StartView\setting.png">
+    <AvaloniaResource Update="Assets\Buttons\Button1\setting.png">
       <CopyToOutputDirectory>AvaloniaResource</CopyToOutputDirectory>
     </AvaloniaResource>
   </ItemGroup>

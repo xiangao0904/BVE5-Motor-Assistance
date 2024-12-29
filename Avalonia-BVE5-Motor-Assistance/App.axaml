@@ -14,43 +14,17 @@
     </Application.Styles>
 
 	<Application.Resources>
+		
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<MergeResourceInclude Source="Controls/CustomButton1.axaml"></MergeResourceInclude>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+		
 		<FontFamily x:Key="Deyi">avares://Avalonia-BVE5-Motor-Assistance/Assets/Fonts/SmileySans-Oblique.ttf#得意黑</FontFamily>
 		<FontFamily x:Key="Dosis">avares://Avalonia-BVE5-Motor-Assistance/Assets/Fonts/Dosis-VariableFont_wght.ttf#Dosis</FontFamily>
 		<FontFamily x:Key="Siyuan">avares://Avalonia-BVE5-Motor-Assistance/Assets/Fonts/SourceHanSansSC-Regular-2.otf#Source Han Sans SC</FontFamily>
-		<ControlTheme x:Key="CustomButtonStyle1" TargetType="Button">
-			<Setter Property="Template">
-				<Setter.Value>
-					
-					<ControlTemplate>
-						<Panel>
-							<!-- 默认面板，填充红色 -->
-							<Panel x:Name="MainPanel" Background="Red" Height="52" Width="100">
-								<!-- 默认矩形，填充绿色 -->
-								<Rectangle x:Name="InnerRectangle" Fill="Green" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
-								<ContentPresenter x:Name="PART_ContentPresenter"
-                                                  Content="{TemplateBinding Content}"
-                                                  Margin="10"
-                                                  HorizontalAlignment="Center"
-                                                  VerticalAlignment="Center"/>
-							</Panel>
-						</Panel>
-					</ControlTemplate>
-					
-				</Setter.Value>
-				
-			</Setter>
 
-
-		</ControlTheme>
-						<!-- 鼠标悬停样式 -->
-			<Style Selector="Button:hover Panel#MainPanel">
-				<Setter Property="Background" Value="Blue"/>
-				<!-- 面板悬停时变为蓝色 -->
-			</Style>
-			<Style Selector="Button:hover Rectangle#InnerRectangle">
-				<Setter Property="Fill" Value="Yellow"/>
-				<!-- 矩形悬停时变为黄色 -->
-			</Style>
 	</Application.Resources>
 	
 	

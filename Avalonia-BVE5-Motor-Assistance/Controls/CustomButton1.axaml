@@ -1,0 +1,73 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:c="clr-namespace:Avalonia_BVE5_Motor_Assistance.Controls"
+                    x:ClassModifier="internal">
+  <Design.PreviewWith>
+    <Border Padding="20">
+      <StackPanel Spacing="20">
+        <c:CustomButton1 Width="191" Height="52" Content="选择模式"/>
+        <c:CustomButton1 Width="191" Classes="history" Content="Click Me!"/>
+      </StackPanel>
+    </Border>
+  </Design.PreviewWith>
+
+  <ControlTheme x:Key="{x:Type c:CustomButton1}" TargetType="c:CustomButton1">
+    <Setter Property="Background" Value="{DynamicResource ButtonBackground}" />
+    <Setter Property="Foreground" Value="White" />
+    <Setter Property="FontFamily" Value="{StaticResource Deyi}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrush}" />
+    <Setter Property="BorderThickness" Value="{DynamicResource ButtonBorderThemeThickness}" />
+    <Setter Property="CornerRadius" Value="{DynamicResource ControlCornerRadius}" />
+    <Setter Property="Transitions">
+
+    </Setter>
+
+    <Setter Property="Template">
+      <ControlTemplate>
+        <StackPanel Background="#373F47" Orientation="Horizontal">
+          <Rectangle Width="5" HorizontalAlignment="Left" x:Name="GoodRectangle"/>
+          <Image Height="20" Margin="46 0 0 0" x:Name="Icon"></Image>
+          <ContentPresenter x:Name="PART_ContentPresenter"
+                            Content="{TemplateBinding Content}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            Padding="{TemplateBinding Padding}"
+                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalContentAlignment="Center" 
+                            Margin="3 0 0 0"/>
+          
+        </StackPanel>
+      </ControlTemplate>
+    </Setter>
+    
+    <Style Selector="^ /template/ Image">
+      <Setter Property="Source" Value="avares://Avalonia-BVE5-Motor-Assistance/Assets/Buttons/Button1/newfile.png"/>
+    </Style>
+    
+    <Style Selector="^ /template/ Rectangle#GoodRectangle">
+      <Setter Property="Fill" Value="rgba(55, 63, 71, 1)" />
+    </Style>
+    
+    <Style Selector="^:pointerover /template/ Rectangle#GoodRectangle">
+      <Setter Property="Fill" Value="rgba(231, 196, 138, 1)" />
+    </Style>
+    
+    <Style Selector="^:pointerover /template/ StackPanel">
+      <Setter Property="Background" Value="rgb(70, 81, 92)" />
+    </Style>
+    
+    <Style Selector="^:pressed  /template/ ContentPresenter#PART_ContentPresenter">
+    </Style>
+
+    <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="{DynamicResource ButtonBackgroundDisabled}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrushDisabled}" />
+      <Setter Property="Foreground" Value="{DynamicResource ButtonForegroundDisabled}" />
+    </Style>
+
+    <Style Selector="^.history">
+      <Style Selector="^ /template/ Image#Icon">
+        <Setter Property="Source" Value="/Assets/Buttons/history.png"/>
+      </Style>
+    </Style>
+  </ControlTheme>
+</ResourceDictionary>

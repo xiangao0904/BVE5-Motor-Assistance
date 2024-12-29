@@ -6,6 +6,9 @@ using Avalonia.Markup.Xaml;
 using Avalonia_BVE5_Motor_Assistance.ViewModels;
 using Avalonia_BVE5_Motor_Assistance.Views;
 using System.Linq;
+using Avalonia.Metadata;
+
+[assembly: XmlnsDefinition("https://github.com/avaloniaui", "Avalonia.BVE5_Motor_Assistance.Controls")]
 
 namespace Avalonia_BVE5_Motor_Assistance
 {

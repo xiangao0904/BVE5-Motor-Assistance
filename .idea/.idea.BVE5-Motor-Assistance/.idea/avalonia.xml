@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Avalonia-BVE5-Motor-Assistance/App.axaml" value="Avalonia-BVE5-Motor-Assistance/Avalonia-BVE5-Motor-Assistance.csproj" />
+        <entry key="Avalonia-BVE5-Motor-Assistance/Controls/CustomButton.axaml" value="Avalonia-BVE5-Motor-Assistance/Avalonia-BVE5-Motor-Assistance.csproj" />
+        <entry key="Avalonia-BVE5-Motor-Assistance/Controls/CustomButton1.axaml" value="Avalonia-BVE5-Motor-Assistance/Avalonia-BVE5-Motor-Assistance.csproj" />
+        <entry key="Avalonia-BVE5-Motor-Assistance/Controls/TitleBar.axaml" value="Avalonia-BVE5-Motor-Assistance/Avalonia-BVE5-Motor-Assistance.csproj" />
+        <entry key="Avalonia-BVE5-Motor-Assistance/Views/StartWindow.axaml" value="Avalonia-BVE5-Motor-Assistance/Avalonia-BVE5-Motor-Assistance.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

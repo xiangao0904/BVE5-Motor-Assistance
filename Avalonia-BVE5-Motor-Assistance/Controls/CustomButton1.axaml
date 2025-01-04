@@ -48,7 +48,15 @@
     </Style>
     
     <Style Selector="^:pointerover /template/ Rectangle#GoodRectangle">
-      <Setter Property="Fill" Value="rgba(231, 196, 138, 1)" />
+      <Setter Property="Fill" Value="rgb(70, 81, 92)" />
+    </Style>
+    
+    <Style Selector="^:checked /template/ Rectangle#GoodRectangle">
+      <Setter Property="Fill" Value="rgba(255, 203, 120, 1)" />
+    </Style>
+    
+    <Style Selector="^:checked /template/ StackPanel">
+      <Setter Property="Background" Value="rgb(70, 81, 92)" />
     </Style>
     
     <Style Selector="^:pointerover /template/ StackPanel">
@@ -66,7 +74,25 @@
 
     <Style Selector="^.history">
       <Style Selector="^ /template/ Image#Icon">
-        <Setter Property="Source" Value="/Assets/Buttons/history.png"/>
+        <Setter Property="Source" Value="/Assets/StartView/history.png"/>
+      </Style>
+    </Style>
+    
+    <Style Selector="^.newfile">
+      <Style Selector="^ /template/ Image#Icon">
+        <Setter Property="Source" Value="/Assets/StartView/newfile.png"/>
+      </Style>
+    </Style>
+    
+    <Style Selector="^.openfile">
+      <Style Selector="^ /template/ Image#Icon">
+        <Setter Property="Source" Value="/Assets/StartView/openfile.png"/>
+      </Style>
+    </Style>
+    
+    <Style Selector="^.setting">
+      <Style Selector="^ /template/ Image#Icon">
+        <Setter Property="Source" Value="/Assets/StartView/setting.png"/>
       </Style>
     </Style>
   </ControlTheme>

@@ -28,7 +28,7 @@ namespace Avalonia_BVE5_Motor_Assistance
                 DisableAvaloniaDataAnnotationValidation();
                 desktop.MainWindow = new MainWindow
                 {
-                    DataContext = new MainWindowViewModel(),
+                    DataContext = new StartWindowViewModel(),
                 };
             }
 

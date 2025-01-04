@@ -3,29 +3,29 @@
              x:Class="Avalonia_BVE5_Motor_Assistance.App"
              xmlns:local="using:Avalonia_BVE5_Motor_Assistance"
              RequestedThemeVariant="Default">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+    <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
-    <Application.DataTemplates>
-        <local:ViewLocator/>
-    </Application.DataTemplates>
-  
     <Application.Styles>
         <FluentTheme />
     </Application.Styles>
 
-	<Application.Resources>
-		
-		<ResourceDictionary>
-			<ResourceDictionary.MergedDictionaries>
-				<MergeResourceInclude Source="Controls/CustomButton1.axaml"></MergeResourceInclude>
-			</ResourceDictionary.MergedDictionaries>
-		</ResourceDictionary>
-		
-		<FontFamily x:Key="Deyi">avares://Avalonia-BVE5-Motor-Assistance/Assets/Fonts/SmileySans-Oblique.ttf#得意黑</FontFamily>
-		<FontFamily x:Key="Dosis">avares://Avalonia-BVE5-Motor-Assistance/Assets/Fonts/Dosis-VariableFont_wght.ttf#Dosis</FontFamily>
-		<FontFamily x:Key="Siyuan">avares://Avalonia-BVE5-Motor-Assistance/Assets/Fonts/SourceHanSansSC-Regular-2.otf#Source Han Sans SC</FontFamily>
+    <Application.DataTemplates>
+        <local:ViewLocator />
+    </Application.DataTemplates>
 
-	</Application.Resources>
-	
-	
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <MergeResourceInclude Source="Controls/CustomButton1.axaml"></MergeResourceInclude>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+        <FontFamily x:Key="Deyi">avares://Avalonia-BVE5-Motor-Assistance/Assets/Fonts/SmileySans-Oblique.ttf#得意黑</FontFamily>
+        <FontFamily x:Key="Dosis">avares://Avalonia-BVE5-Motor-Assistance/Assets/Fonts/Dosis-VariableFont_wght.ttf#Dosis</FontFamily>
+        <FontFamily x:Key="Siyuan">avares://Avalonia-BVE5-Motor-Assistance/Assets/Fonts/SourceHanSansSC-Regular-2.otf#Source Han Sans SC</FontFamily>
+
+    </Application.Resources>
+
+
 </Application>

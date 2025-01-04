@@ -5,33 +5,43 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="1140" d:DesignHeight="889"
-		Width="1140"
-		Height="889"
+        Width="1140"
+        Height="889"
         x:Class="Avalonia_BVE5_Motor_Assistance.Views.MainWindow"
-        x:DataType="vm:MainWindowViewModel"
-		ExtendClientAreaChromeHints="NoChrome"
+        x:DataType="vm:StartWindowViewModel"
+        ExtendClientAreaChromeHints="NoChrome"
         ExtendClientAreaToDecorationsHint="True"
-		Background="#515A63"
+        Background="#515A63"
         Icon="/Assets/logo.png"
         Title="BVE5-Motor-Assistance">
-	
+
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
+        <vm:StartWindowViewModel />
     </Design.DataContext>
-	
-	<DockPanel>
-		<ctrl:TitleBar DockPanel.Dock="Top"/>
-		<StackPanel DockPanel.Dock="Left" Width="191" Orientation="Vertical" Background="#373F47">
-			<ctrl:CustomButton1 Width="191"  Height="52" Classes="history" Content="历史记录" VerticalContentAlignment="Center" FontSize="20"></ctrl:CustomButton1>
-		</StackPanel>
-		<!-- <Grid Width="191" Background="#373F47"> -->
-		<!-- 		<ctrl:CustomButton1 Content="111111111111" Height="52"></ctrl:CustomButton1> -->
-		<!-- </Grid> -->
-		<Grid DockPanel.Dock="Bottom" Height="46" Background="#363F48">
-			<TextBlock Text=""/>
-		</Grid>
-		<TextBlock></TextBlock>
-	</DockPanel>
+
+    <DockPanel>
+        <ctrl:TitleBar DockPanel.Dock="Top" />
+        <StackPanel DockPanel.Dock="Left" Width="191" Orientation="Vertical" Background="#373F47">
+            <ctrl:CustomButton1 GroupName="Start" IsChecked="True" Width="191" Height="52" Classes="history"
+                                Content="历史记录" VerticalContentAlignment="Center" FontSize="20"
+                                Command="{Binding GoHistoryCommand}" />
+            <ctrl:CustomButton1 GroupName="Start" Width="191" Height="52" Classes="newfile" Content="新建文件"
+                                VerticalContentAlignment="Center" FontSize="20"
+                                Command="{Binding GoNewFileCommand}" />
+            <ctrl:CustomButton1 GroupName="Start" Width="191" Height="52" Classes="openfile" Content="打开文件"
+                                VerticalContentAlignment="Center" FontSize="20" />
+            <ctrl:CustomButton1 GroupName="Start" Width="191" Height="52" Classes="setting" Content="偏好设置"
+                                VerticalContentAlignment="Center" FontSize="20" />
+        </StackPanel>
+        <!-- <Grid Width="191" Background="#373F47"> -->
+        <!-- 		<ctrl:CustomButton1 Content="111111111111" Height="52"></ctrl:CustomButton1> -->
+        <!-- </Grid> -->
+        <Grid DockPanel.Dock="Bottom" Height="46" Background="#363F48">
+            <TextBlock Text="" />
+        </Grid>
+
+        <ContentControl x:Name="MainContent" Content="{Binding CurrentViewModel}" />
+    </DockPanel>
 </Window>

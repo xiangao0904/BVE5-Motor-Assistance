@@ -1,24 +1,18 @@
 using Avalonia.Controls;
 using Avalonia.Input;
 
-namespace Avalonia_BVE5_Motor_Assistance.Views
+namespace Avalonia_BVE5_Motor_Assistance.Views;
+
+public partial class MainWindow : Window
 {
-    public partial class MainWindow : Window
+    public MainWindow()
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-            this.PointerPressed += MainWindow_PointerPressed;
-        }
+        InitializeComponent();
+        PointerPressed += MainWindow_PointerPressed;
+    }
 
-        private void MainWindow_PointerPressed(object? sender, Avalonia.Input.PointerPressedEventArgs e)
-        {
-            if (e.Pointer.Type == PointerType.Mouse)
-            {
-                this.BeginMoveDrag(e);
-            }
-        }
-
-     
+    private void MainWindow_PointerPressed(object? sender, PointerPressedEventArgs e)
+    {
+        if (e.Pointer.Type == PointerType.Mouse) BeginMoveDrag(e);
     }
 }

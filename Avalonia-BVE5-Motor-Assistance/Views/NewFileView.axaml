@@ -5,6 +5,6 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Avalonia_BVE5_Motor_Assistance.Views.NewFileView">
     <Grid>
-        <TextBlock Text="新建"></TextBlock>
+        <TextBlock Text="新建" />
     </Grid>
 </UserControl>

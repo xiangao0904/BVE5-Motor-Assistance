@@ -1,87 +1,104 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
-    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
-    <RootNamespace> Avalonia_BVE5_Motor_Assistance</RootNamespace>
-  </PropertyGroup>
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+        <RootNamespace>Avalonia_BVE5_Motor_Assistance</RootNamespace>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\" />
-    <AvaloniaResource Include="Assets\**" />
-  </ItemGroup>
+    <ItemGroup>
+        <AvaloniaResource Include="Assets\**"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <AvaloniaResource Remove="Assets\close.png" />
-    <AvaloniaResource Remove="Assets\max.png" />
-    <AvaloniaResource Remove="Assets\min.png" />
-  </ItemGroup>
+    <ItemGroup>
+        <AvaloniaResource Remove="Assets\close.png"/>
+        <AvaloniaResource Remove="Assets\max.png"/>
+        <AvaloniaResource Remove="Assets\min.png"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <None Remove="Assets\close.png" />
-    <None Remove="Assets\Fonts\Dosis-VariableFont_wght.ttf" />
-    <None Remove="Assets\Fonts\SmileySans-Oblique.ttf" />
-    <None Remove="Assets\Fonts\SourceHanSansSC-Regular-2.otf" />
-    <None Remove="Assets\logo.png" />
-    <None Remove="Assets\max.png" />
-    <None Remove="Assets\min.png" />
-    <None Remove="Assets\Buttons\Button1\newfile.png" />
-    <None Remove="Assets\Buttons\Button1\openfile.png" />
-    <None Remove="Assets\Buttons\Button1\setting.png" />
-  </ItemGroup>
+    <ItemGroup>
+        <None Remove="Assets\close.png"/>
+        <None Remove="Assets\Fonts\Dosis-VariableFont_wght.ttf"/>
+        <None Remove="Assets\Fonts\SmileySans-Oblique.ttf"/>
+        <None Remove="Assets\Fonts\SourceHanSansSC-Regular-2.otf"/>
+        <None Remove="Assets\logo.png"/>
+        <None Remove="Assets\max.png"/>
+        <None Remove="Assets\min.png"/>
+        <None Remove="Assets\Buttons\Button1\newfile.png"/>
+        <None Remove="Assets\Buttons\Button1\openfile.png"/>
+        <None Remove="Assets\Buttons\Button1\setting.png"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Avalonia" Version="11.2.1" />
-    <PackageReference Include="Avalonia.Desktop" Version="11.2.1" />
-    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.1" />
-    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.2.1" />
-    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-    <PackageReference Include="Avalonia.Diagnostics" Version="11.2.1">
-      <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
-      <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="11.2.1"/>
+        <PackageReference Include="Avalonia.Desktop" Version="11.2.1"/>
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.1"/>
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.2.1"/>
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Include="Avalonia.Diagnostics" Version="11.2.1">
+            <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
+            <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <Resource Include="Assets\Buttons\close.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Buttons\max.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Assets\Buttons\min.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
+    <ItemGroup>
+        <Resource Include="Assets\Buttons\close.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Resource>
+        <Resource Include="Assets\Buttons\max.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Resource>
+        <Resource Include="Assets\Buttons\min.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Resource>
+    </ItemGroup>
 
-  <ItemGroup>
-    <AvaloniaResource Update="Assets\Fonts\Dosis-VariableFont_wght.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AvaloniaResource>
-    <AvaloniaResource Update="Assets\Fonts\SmileySans-Oblique.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AvaloniaResource>
-    <AvaloniaResource Update="Assets\Fonts\SourceHanSansSC-Regular-2.otf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AvaloniaResource>
-    <AvaloniaResource Update="Assets\Buttons\Button1\newfile.png">
-      <CopyToOutputDirectory></CopyToOutputDirectory>
-    </AvaloniaResource>
-    <AvaloniaResource Update="Assets\Buttons\Button1\openfile.png">
-      <CopyToOutputDirectory>AvaloniaResource</CopyToOutputDirectory>
-    </AvaloniaResource>
-    <AvaloniaResource Update="Assets\Buttons\Button1\setting.png">
-      <CopyToOutputDirectory>AvaloniaResource</CopyToOutputDirectory>
-    </AvaloniaResource>
-  </ItemGroup>
+    <ItemGroup>
+        <AvaloniaResource Update="Assets\Fonts\Dosis-VariableFont_wght.ttf">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AvaloniaResource>
+        <AvaloniaResource Update="Assets\Fonts\SmileySans-Oblique.ttf">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AvaloniaResource>
+        <AvaloniaResource Update="Assets\Fonts\SourceHanSansSC-Regular-2.otf">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </AvaloniaResource>
+        <AvaloniaResource Update="Assets\Buttons\Button1\newfile.png">
+            <CopyToOutputDirectory>AvaloniaResource</CopyToOutputDirectory>
+        </AvaloniaResource>
+        <AvaloniaResource Update="Assets\Buttons\Button1\openfile.png">
+            <CopyToOutputDirectory>AvaloniaResource</CopyToOutputDirectory>
+        </AvaloniaResource>
+        <AvaloniaResource Update="Assets\Buttons\Button1\setting.png">
+            <CopyToOutputDirectory>AvaloniaResource</CopyToOutputDirectory>
+        </AvaloniaResource>
+    </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="Views\StartWindow.axaml.cs">
-      <DependentUpon>StartWindow.axaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
+    <ItemGroup>
+        <Compile Update="Views\StartWindow.axaml.cs">
+            <DependentUpon>StartWindow.axaml</DependentUpon>
+        </Compile>
+        <Compile Update="Lang\Resources.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Resources.resx</DependentUpon>
+        </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Update="Lang\Resources.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="Assets\settings.cfg">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
 </Project>

@@ -17,7 +17,7 @@
 
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <MergeResourceInclude Source="Controls/CustomButton1.axaml"></MergeResourceInclude>
+                <MergeResourceInclude Source="Controls/CustomButton1.axaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 

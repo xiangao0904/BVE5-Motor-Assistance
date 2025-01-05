@@ -5,6 +5,6 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Avalonia_BVE5_Motor_Assistance.Views.HistoryView">
     <Grid>
-        <TextBlock Text="历史"></TextBlock>
+        <TextBlock Text="历史" />
     </Grid>
 </UserControl>

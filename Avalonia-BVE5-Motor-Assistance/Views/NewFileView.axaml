@@ -2,9 +2,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="1082" d:DesignHeight="919"
+             xmlns:ctrl="using:Avalonia_BVE5_Motor_Assistance.Controls"
+             Background="rgba(81, 90, 99, 1)"
              x:Class="Avalonia_BVE5_Motor_Assistance.Views.NewFileView">
-    <Grid>
-        <TextBlock Text="新建" />
-    </Grid>
+
+ 
+
+    <DockPanel>
+        <StackPanel Spacing="10" Margin="28 26 0 0 " DockPanel.Dock="Top">
+            <StackPanel.Styles>
+                <Style Selector="TextBox.SoundNameBox">
+                    <Setter Property="Foreground" Value="White" />
+                </Style>
+                <Style Selector="TextBox.SoundNameBox:focus">
+                    <Setter Property="Foreground" Value="Black" />
+                </Style>
+            </StackPanel.Styles>
+            <TextBlock Text="音效名称" FontFamily="{StaticResource DeYi}" Foreground="White" FontSize="25"/>
+            <TextBox Classes="SoundNameBox" Width="821" HorizontalAlignment="Left" Height="32" Background="#495159"
+                     BorderBrush="White" Watermark="Type name here" />
+            <TextBlock Text="最大速度" FontFamily="{StaticResource DeYi}" Foreground="White" FontSize="25" />
+            <NumericUpDown Width="821" HorizontalAlignment="Left" Height="32" Background="#495159" BorderBrush="White"
+                           Foreground="White" Minimum="0" Maximum="400" Increment="10" Value="120"
+                           LostFocus="InputElement_OnLostFocus" />
+
+        </StackPanel>
+        <ctrl:CustomButton2 HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 29 29" Height="38"
+                            Width="93" FontFamily="{StaticResource DeYi}" FontSize="20" Content="新建" />
+
+    </DockPanel>
+
 </UserControl>

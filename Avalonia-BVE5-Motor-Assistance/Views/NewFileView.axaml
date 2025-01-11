@@ -7,7 +7,6 @@
              Background="rgba(81, 90, 99, 1)"
              x:Class="Avalonia_BVE5_Motor_Assistance.Views.NewFileView">
 
- 
 
     <DockPanel>
         <StackPanel Spacing="10" Margin="28 26 0 0 " DockPanel.Dock="Top">
@@ -18,8 +17,11 @@
                 <Style Selector="TextBox.SoundNameBox:focus">
                     <Setter Property="Foreground" Value="Black" />
                 </Style>
+                <Style Selector="NumericUpDown /template/ ButtonSpinner#PART_Spinner:right /template/ PathIcon /template/ Path">
+                    <Setter Property="Fill" Value="White" />
+                </Style>
             </StackPanel.Styles>
-            <TextBlock Text="音效名称" FontFamily="{StaticResource DeYi}" Foreground="White" FontSize="25"/>
+            <TextBlock Text="音效名称" FontFamily="{StaticResource DeYi}" Foreground="White" FontSize="25" />
             <TextBox Classes="SoundNameBox" Width="821" HorizontalAlignment="Left" Height="32" Background="#495159"
                      BorderBrush="White" Watermark="Type name here" />
             <TextBlock Text="最大速度" FontFamily="{StaticResource DeYi}" Foreground="White" FontSize="25" />

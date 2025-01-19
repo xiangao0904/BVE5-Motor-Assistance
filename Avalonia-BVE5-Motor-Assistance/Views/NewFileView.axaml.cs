@@ -3,6 +3,9 @@ using System.Text.RegularExpressions;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Interactivity;
+using Avalonia.VisualTree;
+using MsBox.Avalonia;
+using MsBox.Avalonia.Enums;
 
 namespace Avalonia_BVE5_Motor_Assistance.Views;
 
@@ -38,21 +41,45 @@ public partial class NewFileView : UserControl
                 catch (OverflowException)
                 {
                     // 值超出 int 范围
-                    Console.WriteLine($"{value.Value} 超出 int 的范围，无法转换为 int。");
+                    Console.WriteLine($@"{value.Value} 超出 int 的范围，无法转换为 int。");
                 }
                 catch (Exception ex)
                 {
                     // 处理其他潜在异常
-                    Console.WriteLine($"转换出错: {ex.Message}");
+                    Console.WriteLine($@"转换出错: {ex.Message}");
                 }
             }
             else
             {
-                Console.WriteLine("没有输入有效的值。");
+                Console.WriteLine(@"没有输入有效的值。");
             }
-        
         }
     }
 
 
+    private async void CreateFile(object? sender, RoutedEventArgs e)
+    {
+        Console.WriteLine("ok");
+        var currentWindow = this.VisualRoot as Window;
+        string? soundName = SoundName.Text;
+
+        int maxSpeed = Convert.ToInt16(MaxSpeed.Text);
+        if (currentWindow != null && soundName != null)
+        {
+            var editWindow = new EditWindow(soundName, maxSpeed);
+
+            // 显示 EditWindow
+            editWindow.Show();
+            // 关闭当前窗口
+            currentWindow.Close();
+        }
+        else
+        {
+            var box = MessageBoxManager.GetMessageBoxStandard("Caption", "请输入正确的名称或者速度",
+                    ButtonEnum.Ok);
+
+            var result = await box.ShowAsync();
+        }
+        // 创建 EditWindow 的实例
+    }
 }

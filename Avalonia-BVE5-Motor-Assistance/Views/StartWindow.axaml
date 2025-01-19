@@ -38,9 +38,9 @@
                                 VerticalContentAlignment="Center" FontSize="20" />
         </StackPanel>
         <Grid DockPanel.Dock="Bottom" Height="46" Background="#363F48">
-            <TextBlock Text="sss" />
+      
         </Grid>
-
+        <Rectangle DockPanel.Dock="Right" Width="185" Fill="#363F48"/>
         <ContentControl x:Name="MainContent" Content="{Binding CurrentViewModel}" />
     </DockPanel>
 </Window>

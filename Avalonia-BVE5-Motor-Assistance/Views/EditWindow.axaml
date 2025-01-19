@@ -1,0 +1,45 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:Avalonia_BVE5_Motor_Assistance.Controls"
+        mc:Ignorable="d" d:DesignWidth="1140" d:DesignHeight="889"
+        Width="1140"
+        Height="889"
+        x:Class="Avalonia_BVE5_Motor_Assistance.Views.EditWindow"
+        ExtendClientAreaChromeHints="NoChrome"
+        ExtendClientAreaToDecorationsHint="True"
+        Background="#515A63"
+        Icon="/Assets/logo.png"
+        Title="BVE5-Motor-Assistance">
+    <DockPanel>
+        <controls:TitleBar DockPanel.Dock="Top" />
+        <StackPanel DockPanel.Dock="Left" Width="191" Orientation="Vertical" Background="#373F47">
+
+        </StackPanel>
+        <Grid DockPanel.Dock="Bottom" Height="72" Background="#363F48">
+
+        </Grid>
+        <StackPanel DockPanel.Dock="Right" Width="262" Background="#363F48">
+            <StackPanel.Styles>
+                <Style Selector="TextBox.TextBox1">
+                    <Setter Property="Foreground" Value="White" />
+                </Style>
+                <Style Selector="TextBox.TextBox1:focus">
+                    <Setter Property="Foreground" Value="Black" />
+                </Style>
+            </StackPanel.Styles>
+            <TextBlock Margin="14,14,0,0" FontSize="20" FontFamily="{StaticResource DeYi}" Foreground="White">音轨层级</TextBlock>
+            <Panel Margin="14,14,0,0">
+                <TextBlock  FontSize="20" FontFamily="{StaticResource DeYi}" Foreground="White">名称</TextBlock>
+                <TextBlock Name="SoundName" Margin="59 0 0 0"  FontSize="20" FontFamily="{StaticResource DeYi}" Foreground="White"></TextBlock>
+            </Panel>
+            <Panel Margin="14,14,0,0">
+                <TextBlock  FontSize="20" FontFamily="{StaticResource DeYi}" Foreground="White">颜色</TextBlock>
+                <TextBox Classes="TextBox1"  Margin="59 0 0 0"  FontSize="20" FontFamily="{StaticResource DeYi}" Foreground="White"></TextBox>
+            </Panel>
+        </StackPanel>
+
+        <ContentControl x:Name="MainContent" />
+    </DockPanel>
+</Window>

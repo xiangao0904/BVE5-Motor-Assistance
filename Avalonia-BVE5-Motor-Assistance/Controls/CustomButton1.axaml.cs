@@ -1,6 +1,7 @@
 using System;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.VisualTree;
 
 namespace Avalonia_BVE5_Motor_Assistance.Controls;
@@ -22,7 +23,7 @@ public class CustomButton1 : RadioButton
         set => SetValue(RectangleWidthProperty, value);
     }
 
-    private void OnLoaded(object sender, EventArgs e)
+    private void OnLoaded(object? sender, RoutedEventArgs routedEventArgs)
     {
         if (this.GetVisualRoot() is not Window window) return;
 

@@ -28,18 +28,82 @@
                 <Style Selector="TextBox.TextBox1:focus">
                     <Setter Property="Foreground" Value="Black" />
                 </Style>
+                
             </StackPanel.Styles>
             <TextBlock Margin="14,14,0,0" FontSize="20" FontFamily="{StaticResource DeYi}" Foreground="White">音轨层级</TextBlock>
             <Panel Margin="14,14,0,0">
-                <TextBlock  FontSize="20" FontFamily="{StaticResource DeYi}" Foreground="White">名称</TextBlock>
-                <TextBlock Name="SoundName" Margin="59 0 0 0"  FontSize="20" FontFamily="{StaticResource DeYi}" Foreground="White"></TextBlock>
+                <TextBlock FontSize="20" FontFamily="{StaticResource DeYi}" Foreground="White">名称</TextBlock>
+                <TextBlock Name="SoundName" Margin="59 0 0 0" FontSize="20" FontFamily="{StaticResource DeYi}"
+                           Foreground="White">
+                </TextBlock>
             </Panel>
-            <Panel Margin="14,14,0,0">
-                <TextBlock  FontSize="20" FontFamily="{StaticResource DeYi}" Foreground="White">颜色</TextBlock>
-                <TextBox Classes="TextBox1"  Margin="59 0 0 0"  FontSize="20" FontFamily="{StaticResource DeYi}" Foreground="White"></TextBox>
+            <!-- <Panel Margin="14,14,0,0"> -->
+            <!--         <TextBlock  FontSize="20" FontFamily="{StaticResource DeYi}" Foreground="White">颜色</TextBlock> -->
+            <!-- -->
+            <!-- </Panel> -->
+            <Panel Margin="14,17,0,0">
+                <TextBlock FontSize="20" FontFamily="{StaticResource DeYi}" Foreground="White">文件</TextBlock>
+                <Button
+                    Margin="59 0 0 0"
+                    Width="130"
+                    Height="26"
+                    Background="#495159"
+                    BorderBrush="White"
+                    Click="Button_ReadFile"
+                    >
+                </Button>
             </Panel>
+            <TextBlock Margin="14 17 0 0" FontSize="20" FontFamily="{StaticResource DeYi}" Foreground="White">
+                已选中点
+            </TextBlock>
+            <Panel Margin="14,19,0,0">
+                <TextBlock  FontSize="20" FontFamily="{StaticResource DeYi}" Foreground="White">X=</TextBlock>
+                <TextBox
+                    Margin="0 0 0 0"
+                    Width="130"
+                    Height="26"
+                    Background="#495159"
+                    BorderBrush="White"
+                    Watermark="km/h"
+                    >
+                </TextBox>
+            </Panel>
+            <Panel Margin="14,19,0,0">
+                <TextBlock  FontSize="20" FontFamily="{StaticResource DeYi}" Foreground="White">Y=</TextBlock>
+                <TextBox
+                    Margin="0 0 0 0"
+                    Width="130"
+                    Height="26"
+                    Background="#495159"
+                    BorderBrush="White"
+                >
+                </TextBox>
+            </Panel>
+            <Button
+                Margin="14 20 0 0"
+                Width="100"
+                Background="#495159"
+                BorderBrush="White"
+                Foreground="White"
+                FontFamily="{StaticResource DeYi}"
+                HorizontalContentAlignment="Center"
+                FontSize="20"
+                Content="删除选中点"
+                >
+            </Button>
+            <Button
+                Margin="14 20 0 0"
+                Background="#495159"
+                BorderBrush="White"
+                Foreground="White"
+                FontFamily="{StaticResource DeYi}"
+                HorizontalContentAlignment="Center"
+                FontSize="20"
+                Content="同步牵引关键帧"
+            >
+            </Button>
         </StackPanel>
 
-        <ContentControl x:Name="MainContent" />
+        <Canvas Name="EditSpace"></Canvas>
     </DockPanel>
 </Window>

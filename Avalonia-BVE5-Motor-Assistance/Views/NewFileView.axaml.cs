@@ -68,7 +68,7 @@ public partial class NewFileView : UserControl
         {
             var editWindow = new EditWindow(soundName, maxSpeed);
 
-            // 显示 EditWindow
+            // 显示 Window1
             editWindow.Show();
             // 关闭当前窗口
             currentWindow.Close();
@@ -80,6 +80,6 @@ public partial class NewFileView : UserControl
 
             var result = await box.ShowAsync();
         }
-        // 创建 EditWindow 的实例
+        // 创建 Window1 的实例
     }
 }

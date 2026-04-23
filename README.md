@@ -1,6 +1,6 @@
 # BVE5-Motor-Assistance
 
-> **⚠️ Note: This repository is deprecated.** > The remade version is available at: [Motor-Sound-Editor]([https://github.com/xxxx](https://github.com/xiangao0904/Motor-Sound-Editor))
+> **⚠️ Note: This repository is deprecated.** > The remade version is available at: [Motor-Sound-Editor](https://github.com/xiangao0904/Motor-Sound-Editor)
 
 ## Introduction
 **BVE5-Motor-Assistance** is an assistant tool specifically developed for BVE Trainsim 5, designed to help developers manage and edit train motor sound projects more efficiently.

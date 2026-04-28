@@ -1,5 +1,5 @@
 # BVE5-Motor-Assistance
-[[中文版](https://github.com/xiangao0904/BVE5-Motor-Assistance/tree/master)]
+[[中文版](https://github.com/xiangao0904/BVE5-Motor-Assistance/blob/master/README-CN.md)]
 > **⚠️ Note: This repository is deprecated.** > The remade version is available at: [Motor-Sound-Editor](https://github.com/xiangao0904/Motor-Sound-Editor)
 
 ## Introduction
